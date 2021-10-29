@@ -7,4 +7,4 @@ const login = new Login();
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
-app.innerHTML = false ? register.render() : login.render();
+app.innerHTML = true ? register.render() : login.render();

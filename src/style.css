@@ -2,12 +2,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Futura Std Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Futura Std Bold'), url('../recursos/tipografia/FuturaStdBold.woff') format('woff');
-  }
 
 html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
   margin: 0;
@@ -57,6 +51,55 @@ a {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+button, p, input, li {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Futura Std Bold';
+}
+
+.textfield {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+
+.textfield__input {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #32286D;
+  border-radius: 3px;
+}
+
+.textfield__input::-webkit-input-placeholder {
+  color: #775BA3;
+  opacity: 0.7;
+}
+
+.textfield__input:-ms-input-placeholder {
+  color: #775BA3;
+  opacity: 0.7;
+}
+
+.textfield__input::-ms-input-placeholder {
+  color: #775BA3;
+  opacity: 0.7;
+}
+
+.textfield__input::placeholder {
+  color: #775BA3;
+  opacity: 0.7;
+}
+
+.textfield__input--icon {
+  padding-left: 4rem;
 }
 
 #app {
