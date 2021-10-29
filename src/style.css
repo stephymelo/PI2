@@ -2,6 +2,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Futura Std Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura Std Bold'), url('../recursos/tipografia/FuturaStdBold.woff') format('woff');
+  }
 
 html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
   margin: 0;
