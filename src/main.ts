@@ -10,4 +10,6 @@ const menu = new Menu();
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
-app.innerHTML = false ? register.render() : login.render() ; menu.render();
+
+app.innerHTML = true ? register.render() : login.render();
+
