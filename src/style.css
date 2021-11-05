@@ -58,7 +58,7 @@ button, p, input, li {
 }
 
 h1, h2, h3 {
-  font-family: 'Futura Std Bold';
+  font-family: 'Futura Std';
 }
 
 .textfield {
@@ -102,8 +102,13 @@ h1, h2, h3 {
   padding-left: 4rem;
 }
 
+@font-face {
+  font-family: Futura Std;
+  src: url("./../recursos/tipografia/FuturaStdBold.woff");
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Futura Std, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
