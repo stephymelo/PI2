@@ -2,6 +2,16 @@ button,p,input,li{
     font-family: 'Nunito', sans-serif;
 }
 
-h1,h2,h3{
-    font-family: 'Futura Std Bold';
+
+@font-face{
+    font-family: 'futur';
+   
+    src: url("./recursos/tipografia/futur.ttf") ;
+
+}
+
+h1{
+    font-weight: 700;
+    font-family: 'futur', sans-serif;
+
 }
