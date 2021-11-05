@@ -56,15 +56,27 @@ input {
 button, p, input, li {
   font-family: 'Nunito', sans-serif;
 }
-
-@font-face {
-  font-family: 'futur';
-  src: url("./recursos/tipografia/futur.ttf");
+.button {
+  background-color: #32286D;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
+
 
 h1 {
   font-weight: 700;
   font-family: 'futur', sans-serif;
+=======
+h1, h2, h3 {
+  font-family: 'Futura Std';
+
 }
 
 .textfield {
@@ -108,21 +120,19 @@ h1 {
   padding-left: 4rem;
 }
 
-.button {
-  background-color: #32286D;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  border-radius: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-}
+
 
 #app {
   font-family: 'Nunito', sans-serif;
+=======
+@font-face {
+  font-family: Futura Std;
+  src: url("./../recursos/tipografia/FuturaStdBold.woff");
+}
+
+#app {
+  font-family: Futura Std, Helvetica, Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
