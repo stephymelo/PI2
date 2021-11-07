@@ -8,8 +8,10 @@ const register = new Register();
 const login = new Login();
 const menu = new Menu();
 
+
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 
-app.innerHTML = true ? register.render() : login.render();
+app.innerHTML = true ? register.render() : login.render() ;
+
 

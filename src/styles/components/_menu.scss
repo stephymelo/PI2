@@ -1,0 +1,37 @@
+.nav{
+    background-color: gray;
+    border-radius: 15px 15px 0px 0px;
+    padding-left:20px;
+    padding-right:20px;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: baseline;
+    
+
+        
+
+    &__li{
+        
+        justify-content:space-between;
+        
+    }
+    &__a{
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+
+    }
+
+    &__title{
+        padding-top:10px;
+
+    }
+
+    
+}

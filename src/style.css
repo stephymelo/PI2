@@ -56,27 +56,9 @@ input {
 button, p, input, li {
   font-family: 'Nunito', sans-serif;
 }
-.button {
-  background-color: #32286D;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  border-radius: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-}
 
-
-h1 {
-  font-weight: 700;
-  font-family: 'futur', sans-serif;
-=======
 h1, h2, h3 {
-  font-family: 'Futura Std';
-
+  font-family: 'Futura Std Bold';
 }
 
 .textfield {
@@ -120,19 +102,71 @@ h1, h2, h3 {
   padding-left: 4rem;
 }
 
+.button {
+  background-color: #32286D;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
 
+.nav {
+  background-color: gray;
+  border-radius: 15px 15px 0px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-#app {
-  font-family: 'Nunito', sans-serif;
-=======
-@font-face {
-  font-family: Futura Std;
-  src: url("./../recursos/tipografia/FuturaStdBold.woff");
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.menu__li {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__title {
+  padding-top: 10px;
 }
 
 #app {
-  font-family: Futura Std, Helvetica, Arial, sans-serif;
-
+  font-family: 'Futura Std Bold';
+  src: local("FuturaStdBold") url("../recursos/tipografia/FuturaStdBold.woff") format("woff");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
