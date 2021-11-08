@@ -1,18 +1,23 @@
 import * as React from 'react';
 import './Register.scss';
-import { RegisterObj } from './../Types/RegisterObj';
+import { PerfilObj } from "../../Types/PerfilObj";
 
 
 
-export type RegisterProp = RegisterObj & {
+export type RegisterProp = PerfilObj & {
 
   
   
   }
 
-const Register: React.FC<RegisterProp> = ({ }) => {
+const Register: React.FC<RegisterProp> = ({id,nombre,username,contra,correo,fechaNacimiento,preferencias }) => {
     return (
-        <div></div>
+        <div>
+
+
+        <button className ="button">Registrarme</button>
+
+        </div>
     );
 }
 

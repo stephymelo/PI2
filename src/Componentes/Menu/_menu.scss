@@ -1,0 +1,52 @@
+.nav{
+    background-color: white;
+    border-radius: 15px 15px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    padding-left:0px;
+    padding-right:40px;
+    box-shadow:  0px -5px 20px rgb(243, 243, 243);
+
+}
+
+.menu{
+    padding-top:10px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: baseline;
+ 
+    
+    
+
+    &__ul{
+        text-decoration: none;
+        list-style: none;
+        
+    }
+
+    &__li{
+        list-style-type: none;
+        justify-content:space-between;
+        
+    }
+    &__a{
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        text-decoration: none;
+        color: #775BA3;
+
+    }
+
+    &__title{
+        padding-top:10px;
+
+    }
+
+    
+}
