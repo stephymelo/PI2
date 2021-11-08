@@ -5,6 +5,12 @@
 @import './Styles/elementos.scss';
 @import './Componentes/Menu/Menu.scss';
 
+
+@font-face{
+    font-family: Nunito;
+    src:  url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+}
+
 @font-face {
   font-family: Futura Std;
   src: url('./Recursos/tipografia/FuturaStdBold.woff') ;
@@ -14,7 +20,7 @@
 
 
 #app {
-    font-family: Futura Std;
+    font-family: Nunito,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
