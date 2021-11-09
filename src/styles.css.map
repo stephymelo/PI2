@@ -12,7 +12,9 @@
         "Componentes/Menu/_menu.scss",
         "Componentes/Cupon/_cupon.scss",
         "Componentes/Cupon/CuponElem/_cuponElem.scss",
-        "Componentes/Descuento/_descuento.scss"
+        "Componentes/Descuento/_descuento.scss",
+        "Componentes/Juego/_juego.scss",
+        "Componentes/Perfil/_perfil.scss"
     ],
     "names": [],
     "file": "styles.css"
