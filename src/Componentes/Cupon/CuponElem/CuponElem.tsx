@@ -1,6 +1,6 @@
 import React from "react";
 import './_cuponElem.scss'
-import colcafeLogo from "../../../Recursos/imagenes/productLogos/pietranLogo.png"
+import colcafeLogo from "../../../Recursos/imagenes/productLogos/pietranResize.png"
 import zigZag from "../../../Recursos/logos/IconosSVG/cuponZigzag.svg"
 
 interface CuponElem {
@@ -14,7 +14,7 @@ const CuponElem: React.FC<CuponElem> = ({ }) => {
             <div className='cupon__section'>
                 <img className='cupon__section--1__zigzag' src={zigZag} />
                 <div className='cupon__section--1'>
-                    <img className='cupon__img' src={colcafeLogo}></img>
+                    <img className='cupon__section--1__logo' src={colcafeLogo}></img>
 
                 </div>
                 <div className='cupon__section--2'>
