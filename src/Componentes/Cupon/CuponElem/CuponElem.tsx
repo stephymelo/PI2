@@ -1,5 +1,4 @@
 import React from "react";
-import './_cuponElem.scss'
 import colcafeLogo from "../../../Recursos/imagenes/productLogos/pietranLogo.png"
 import zigZag from "../../../Recursos/logos/IconosSVG/cuponZigzag.svg"
 

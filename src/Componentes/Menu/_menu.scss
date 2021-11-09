@@ -1,5 +1,5 @@
 .nav{
-    background-color: white;
+    background-color: $principal;
     border-radius: 15px 15px 0px 0px;
     position: fixed;
     bottom: 0;
@@ -41,7 +41,7 @@
         justify-content: baseline;
         align-items: center;
         text-decoration: none;
-        color: #775BA3;
+        color: $secondary;
 
         &__selected{
             color: blue;

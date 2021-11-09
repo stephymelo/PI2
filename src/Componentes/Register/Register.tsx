@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './_register.scss';
 import { PerfilObj } from "../../Types/PerfilObj";
 
 
