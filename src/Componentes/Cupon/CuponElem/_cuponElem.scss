@@ -12,7 +12,7 @@
             
             padding-top:20px;
             padding-bottom:20px;
-            background-color: #775BA3;
+            background-color: $secondary;
             border-radius: 8px 8px 0px 0px;
             justify-content: space-around;
             align-items: center;
@@ -36,7 +36,7 @@
         &--2{
             padding-top:10px;
             padding-bottom:7px;
-            background-color: white;
+            background-color: $white;
 
             &__titulo{
                 padding-top:10px;

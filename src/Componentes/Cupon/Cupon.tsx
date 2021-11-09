@@ -1,7 +1,6 @@
 import * as React from 'react'; 
 import { CuponObj } from "../../Types/CuponObj";
 import CuponElem from './CuponElem/CuponElem';
-import './_cupon.scss'
 
 
 

@@ -4,7 +4,6 @@ import zenu from "../../Recursos/imagenes/productos/zenu.png"
 import festival from "../../Recursos/imagenes/productos/festivalfresa.png"
 import colcafe from "../../Recursos/imagenes/productos/colcafe.png"
 import { DescuentoObj } from "../../Types/DescuentoObj";
-import './_descuento.scss'
 
 
 
