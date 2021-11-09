@@ -1,0 +1,129 @@
+.gameList {
+    margin: 142px 16px 0px;
+
+
+    &__title {
+        font-size: 17px;
+        color: #32286D;
+        margin: 15px 0px 18px 13px;
+    }
+}
+
+.lastGame {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 219.18px;
+    background-repeat: no-repeat !important;
+    background-size: 100%;
+    border-radius: 4px;
+    align-items: center;
+
+    &__logo {
+        width: 99px;
+        height: 99px;
+        margin-top: 22px;
+        margin-bottom: 9px;
+    }
+
+    &__rect {
+        background-color: #629540;
+        width: 100%;
+        height: 89px;
+        position: relative;
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__name {
+     
+        font-size: 17;
+        color: white;
+        margin: 12px 0px 5px 14px;
+    }
+
+    &__descrip {
+       
+        font-size: 13;
+        color: white;
+        margin: 0px 0px 0px 14px;
+    }
+
+    &__bono {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        top: 20px;
+        right: 17px;
+        width: 70px;
+        height: 53.89px;
+        border-radius: 4px;
+        box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
+
+        &--more {
+            top: 35px;
+        }
+    }
+}
+
+.bonoNumber {
+    color: #629540;
+    font-size: 17px;
+
+    &--red {
+        color: #E31D1A; 
+        top: 45px;
+    }
+
+    &--blue {
+       color: #1A79BC
+    }
+
+}
+
+.moreGameList {
+    display: flex;
+    flex-direction: column;
+}
+
+.moreGameCard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 122px;
+    background-color: #E31D1A;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &--blue {
+        background-color:#1A79BC
+    }
+    
+    &__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 12px;
+    }
+
+    &__right {
+        margin-left: 12px;
+    }
+}
+
+.titleGame {
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.descriptGame {
+    font-family: Nunito;
+    color: white;
+    font-size: 13px;
+    margin-top: 13px;
+}
+
