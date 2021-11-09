@@ -1,0 +1,66 @@
+
+.dicountList {
+    margin: 150px 16px 80px;
+    overflow: scroll;
+}
+
+.cardDiscount {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 151px;
+    background-color:white;
+    border-radius: 6.47px;
+    margin-bottom: 11px;
+
+    &__left {
+        display: flex;
+        width: 127px;
+        height: 100%;
+        background-color: #E31D1A;
+        border-radius: 6.47px 0 0 6.47px;
+        align-items: center;
+        justify-content: center;
+
+        &--brown {
+            background-color: #361C03;
+        }
+
+        &--pink {
+            background-color: #FF74C7;
+        }
+    }
+
+    &__title {
+        font-size: 17px;
+        color: #32286D;
+        margin: 15px 0px 0px 13px;
+    }
+
+    &__descrip {
+        font-family: Nunito;
+        font-size: 13px;
+        color: #32286D;
+        margin: 18px 0px 0px 13px;
+    }
+
+    &__infoUbi {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+
+.sub {
+    font-family: Nunito;
+    color: #605EA7;
+    font-size: 13px;
+    margin: 20px 0px 0px 4px;
+}
+.ubi {
+    margin: 16px 0px 0px 13px;
+}
+
+
+

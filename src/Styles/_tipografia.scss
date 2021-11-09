@@ -1,18 +1,39 @@
 
-button,p,input,li,h3,span{
+button,p,input,li,h3,h4,span{
     font-family: 'Nunito', sans-serif;
-    color:$principal;
+ 
+}
+span{
+    font-size: 12px;
 }
 
 h3{
+   
     font-weight: 700;
 }
+
+h4{
+    color:white;
+    font-size:17px;
+    font-weight: 300;
+}
+
 p{
     font-size: 14px;
 }
 
 
 h1,h2{
+    color:white;
     font-family: 'Futura Std';
 
+}
+
+h2{
+    font-size:20px;
+}
+
+
+h1{
+    font-size: 24px;
 }

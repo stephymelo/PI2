@@ -1,17 +1,42 @@
 .cupon{
+    margin-top:150px;
     box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 4.05973px 4.05973px;
     max-width: 150px;
     &__section{
+        border-radius: 9px;
+       
         &--1{
+            padding-top:30px;
+            padding-bottom:30px;
             background-color: #629540;
+            border-radius: 9px;
+            justify-content: space-around;
+            align-items: center;
+
+            &__img{
+                justify-content: center;
+                
+            }
+
           
         }
         &--2{
+            background-color: white;
+
+            &__titulo{
+                color:black;
+            }
             
         }
         &--3{
+            padding-top:20px;
+            padding-bottom:20px;
             background-color: #EFEFEF;
+
+            &__fecha{
+                
+            }
         }
       
     }

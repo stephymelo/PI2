@@ -1,13 +1,16 @@
-@import './Styles/colores.scss';
-@import './Styles/tipografia.scss';
-@import './Styles/breakpoint.scss';
-@import './Styles/reset.scss';
-@import './Styles/elementos.scss';
-@import './Componentes/Menu/Menu.scss';
+@import './Styles/reset';
+@import './Styles/breakpoint';
+@import './Styles/colores';
+@import './Styles/tipografia';
+@import './Styles/elementos';
+@import './Componentes/Header/header';
+@import './Componentes/Menu/menu';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
 
 
 @font-face{
-    font-family: Nunito;
+    font-family: Nunito,sans-serif;
     src:  url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 }
 
@@ -26,8 +29,10 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+    
   }
   
+
   @media screen and (max-width:480px) {
   
   
