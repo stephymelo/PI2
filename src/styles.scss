@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 @import './Styles/reset';
 @import './Styles/breakpoint';
 @import './Styles/colores';
@@ -5,7 +6,9 @@
 @import './Styles/elementos';
 @import './Componentes/Header/header';
 @import './Componentes/Menu/menu';
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+@import './Componentes/Cupon/cupon';
+@import './Componentes/Cupon/CuponElem/cuponElem';
+@import './Componentes/Descuento/descuento';
 
 
 
