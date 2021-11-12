@@ -21,11 +21,11 @@ const Perfil: React.FC<PerfilProp> = ({ }) => {
             <header className="profileHeader">
                 <section className="profileHeader__optionsDiv">
                     <h1 className="titles">Perfil</h1>
-                    <img className="profileHeader__settingsIcon" src={settings} />
+                    <img className="profileHeader__settingsIcon" src={settings} alt="profileHeader"/>
                 </section>
 
                 <div className="profileHeader__pictureDiv">
-                    <img className="profileHeader__picture" src={jorge} />
+                    <img className="profileHeader__picture" src={jorge} alt="user__icon"/>
                     <h3 className="subtitles">Jorge Giraldo</h3>
                 </div>
             </header>
@@ -34,7 +34,7 @@ const Perfil: React.FC<PerfilProp> = ({ }) => {
             <section className="dataUserDiv">
 
                 <section className="dataUser">
-                    <img className="dataUser__icon" src={jorge} />
+                    <img className="dataUser__icon" src={jorge} alt="user__icon" />
                     <div className="dataUser__infoDiv">
                         <h2 className="dataUser__title">Nombre y apellido</h2>
                         <h3 className="dataUser__text">Jorge Giraldo</h3>
@@ -42,7 +42,7 @@ const Perfil: React.FC<PerfilProp> = ({ }) => {
                 </section>
 
                 <section className="dataUser">
-                    <img className="dataUser__icon" src={call} />
+                    <img className="dataUser__icon" src={call} alt="user__phone"/>
                     <div className="dataUser__infoDiv">
                         <h2 className="dataUser__title">Celular</h2>
                         <h3 className="dataUser__text">301-5267896</h3>
@@ -50,7 +50,7 @@ const Perfil: React.FC<PerfilProp> = ({ }) => {
                 </section>
 
                 <section className="dataUser">
-                    <img className="dataUser__icon" src={calender} />
+                    <img className="dataUser__icon" src={calender} alt="user__calender" />
                     <div className="dataUser__infoDiv">
                         <h2 className="dataUser__title">Fecha de nacimiento</h2>
                         <h3 className="dataUser__text">13-09-1990</h3>
@@ -58,12 +58,12 @@ const Perfil: React.FC<PerfilProp> = ({ }) => {
                 </section>
 
                 <section className="dataUser">
-                    <img className="dataUser__icon" src={lock} />
+                    <img className="dataUser__icon" src={lock} alt="user__password"/>
                     <div className="dataUser__infoDiv">
                         <h2 className="dataUser__title">Contraseña</h2>
                         <h3 className="dataUser__text">************</h3>
                     </div>
-                    <img className="dataUser__icon viewIcon" src={view} />
+                    <img className="dataUser__icon viewIcon" src={view} alt="user__lock" />
                 </section>
             </section>
         </div>

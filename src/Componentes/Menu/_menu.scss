@@ -43,8 +43,11 @@
         text-decoration: none;
         color: $secondary;
 
-        &--selected > *{
+        &--selected {
             color: $blue;
+            svg > *{
+                stroke: $blue;
+            }
         }
 
         

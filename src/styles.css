@@ -76,16 +76,15 @@ p {
   font-size: 14px;
 }
 
-h1, h2 {
+h2 {
   color: #FFFFFF;
   font-family: 'Futura Std';
-}
-
-h2 {
   font-size: 20px;
 }
 
 h1 {
+  color: #FFFFFF;
+  font-family: 'Futura Std';
   font-size: 24px;
 }
 
@@ -227,8 +226,12 @@ button {
   color: #775BA3;
 }
 
-.menu__a--selected > * {
+.menu__a--selected {
   color: #689ECE;
+}
+
+.menu__a--selected svg > * {
+  stroke: #689ECE;
 }
 
 .menu__title {
@@ -639,6 +642,15 @@ button {
 
 .viewIcon {
   margin-left: 100px;
+}
+
+.register__title {
+  color: #775BA3;
+  margin-top: 192px;
+}
+
+.register__inputs {
+  padding: 16px;
 }
 
 @font-face {
