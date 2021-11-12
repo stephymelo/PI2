@@ -1,3 +1,4 @@
+import { Genero } from "./Genero";
 
 export type PerfilObj = {
     id: number;
@@ -6,7 +7,11 @@ export type PerfilObj = {
     contra:string;
     correo:string;
     fechaNacimiento:number;
-    preferencias:[]
+    preferencias:[],
+    genero: Genero,
+    ciudad: string,
+    direccion: string|undefined ,
+    telefono: number|undefined,
 
   
   }

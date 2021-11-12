@@ -9,7 +9,7 @@ import view from "../../Recursos/logos/IconosSVG/ojito.svg";
 import jorge from "../../Recursos/imagenes/perfil/jorge.png";
 
 
-export type PerfilProp = PerfilObj & {
+export type PerfilProp =   {
 
 }
 

@@ -13,17 +13,19 @@ import {
   Route,
   HashRouter,
   Routes} from "react-router-dom";
+import { PerfilObj } from '../../Types/PerfilObj';
 
 
 
 
 function App() {
 
+  const [users, setUsers] = useState<PerfilObj[]>([]);
   const [isRegister,SetIsRegister] = useState<boolean>(false);
 
   const LoginContainer = () => {
     return <Routes><Route path="/" element={
-      <Register ></Register>
+      <Register setUsers={setUsers} users={users} ></Register>
       
   }></Route></Routes>
     
@@ -41,7 +43,6 @@ function App() {
               titulo={'Cupones'}
               descripcion={'Nuestros cupones son de un solo uso'} />
             <Cupon id={0} titulo={''} fechaVencer={0} descripcion={''} imagenUrl={''} codigoActivable={''} />
-            {/* <Register id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} /> */}
 
 
 
@@ -80,7 +81,7 @@ function App() {
         </Route>
         <Route path="/perfil" element={
           <div>
-            <Perfil id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} />
+            <Perfil />
           </div>
         }>
 
