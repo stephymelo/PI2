@@ -81,7 +81,7 @@ function App() {
         </Route>
         <Route path="/perfil" element={
           <div>
-            <Perfil />
+            <Perfil id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={''} telefono={0} />
           </div>
         }>
 

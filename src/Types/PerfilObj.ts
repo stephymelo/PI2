@@ -13,5 +13,4 @@ export type PerfilObj = {
     direccion: string|undefined ,
     telefono: number|undefined,
 
-  
   }
