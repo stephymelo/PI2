@@ -7,6 +7,7 @@ import Cupon from '../Cupon/Cupon';
 import Descuento from '../Descuento/Descuento';
 import Juego from '../Juego/Juego';
 import Perfil from '../Perfil/Perfil';
+import Login from '../Login/Login';
 
 import {
   BrowserRouter as Router,
@@ -14,6 +15,7 @@ import {
   HashRouter,
   Routes} from "react-router-dom";
 import { PerfilObj } from '../../Types/PerfilObj';
+
 
 
 
@@ -82,6 +84,14 @@ function App() {
         <Route path="/perfil" element={
           <div>
             <Perfil id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={''} telefono={0} />
+          </div>
+        }>
+
+        </Route>
+
+        <Route path="/login" element={
+          <div>
+            <Login id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={undefined} telefono={undefined}/>
           </div>
         }>
 
