@@ -1,6 +1,6 @@
 import { type } from 'os';
 import * as React from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Genero } from '../../Types/Genero';
 import { PerfilObj } from "../../Types/PerfilObj";
@@ -14,7 +14,7 @@ export type RegisterProp =  {
   }
 
 export const Register: React.FC<RegisterProp> = ({setUsers, users}) => {
-
+  let [isComplete, setIsComplete]  = React.useState(false);
   const [name, setname] = React.useState('');
   const handlenameChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
       setname(event.target.value);
@@ -67,51 +67,64 @@ export const Register: React.FC<RegisterProp> = ({setUsers, users}) => {
   }
 
   let navigate = useNavigate();
+
   const [newUser, setNewUser] = useState<PerfilObj>({
     id : Math.random(),
-    nombre : 'name',
-    username : 'username',
-    contra : 'password',
-    correo : 'correo',
-    fechaNacimiento : 0,
+    nombre : name,
+    username : username,
+    contra : password ,
+    correo : correo,
+    fechaNacimiento : date,
     preferencias : [],
-    genero:  'genero' as Genero,
-    ciudad: 'ciudad',
+    genero:  genero as Genero,
+    ciudad: ciudad,
     direccion: direccion,
     telefono: telefono,
 
   });
   
-  const registerUserAction = (event:any) =>{
-    event.preventDefault();
-    
-    console.log({name});
-    console.log({ciudad});
+  const obj: PerfilObj = {
+      
+    id : Math.random(),
+    nombre : name,
+    username : username,
+    contra : password,
+    correo : correo,
+    fechaNacimiento : date,
+    preferencias : [],
+    genero:  genero as Genero,
+    ciudad: ciudad,
+    direccion: direccion,
+    telefono: telefono,
 
-    setNewUser({
-      
-        id : Math.random(),
-        nombre : name,
-        username : username,
-        contra : password,
-        correo : correo,
-        fechaNacimiento : date,
-        preferencias : [],
-        genero:  genero as Genero,
-        ciudad: ciudad,
-        direccion: direccion,
-        telefono: telefono,
-    
-      
-    })
-    
-    
+  
+}
+
+
+  const RegisterUserAction = (event: any) =>{
+    event.preventDefault();
+    updateNewUser( obj );
+
   }
 
-  console.log({newUser});;
+  
+useEffect(()=>{
+   if(isComplete){
+    addUser();
+   }
+    console.log({isComplete});
+},[newUser]);
 
+
+  const updateNewUser = (objEnter : PerfilObj) =>{
+    setNewUser(objEnter);
+    setIsComplete(true);
+  };
+
+  console.log({newUser});
   const addUser = () =>{
-    console.log({newUser});
+    
+      console.log("DUN");
     if(password === confirmedPassword){
       
       setUsers(
@@ -119,7 +132,11 @@ export const Register: React.FC<RegisterProp> = ({setUsers, users}) => {
       )
       
       navigate("/menu/*");
+      
+      
     }
+    
+    
   }
     return (
     
@@ -137,7 +154,7 @@ export const Register: React.FC<RegisterProp> = ({setUsers, users}) => {
               <Inputs placeholder='Ciudad' type="text" handleChange={handleCiudadChange}/>
               <Inputs placeholder='Dirección' type="text" handleChange={handleDireccionChange}/>
               <Inputs placeholder='Teléfono' type="number" handleChange={handleTelefonoChange}/>
-              <button className ="button" onClick={registerUserAction}>Registrarme</button>
+              <button className ="button" onClick={RegisterUserAction} >Registrarme</button>
             </form>
      
         </section>

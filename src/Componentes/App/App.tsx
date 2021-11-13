@@ -22,7 +22,7 @@ function App() {
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
   const [isRegister,SetIsRegister] = useState<boolean>(false);
-
+  console.log(users);
   const LoginContainer = () => {
     return <Routes><Route path="/" element={
       <Register setUsers={setUsers} users={users} ></Register>
