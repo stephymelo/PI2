@@ -809,7 +809,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 40px;
+  margin-top: 55px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -832,7 +832,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 35px;
+  margin-top: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
