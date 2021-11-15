@@ -231,7 +231,7 @@ button {
 }
 
 .menu__a--selected svg > * {
-  stroke: #689ECE;
+  fill: #689ECE;
 }
 
 .menu__title {
@@ -239,11 +239,65 @@ button {
 }
 
 .cupones {
-  margin-left: 50px;
+  margin-left: 0px;
+  margin-top: 140px;
+}
+
+.cupones__menu {
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cupones__span {
+  color: #775BA3;
+}
+
+.cupones__span--selected {
+  color: #689ECE;
+  height: 2px;
+}
+
+.cupones__span__title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.cupones__span__line {
+  position: fixed;
+  margin-top: 7px;
+  width: 100px;
+  height: 4px;
+  margin-left: -20px;
+  display: none;
+  border-radius: 5px;
+}
+
+.cupones__span__line--selected {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  background-color: #53C2EA;
+  display: block;
+}
+
+.cupones__line {
+  margin-top: 8px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 86%;
+  height: 2px;
+  background-color: gray;
 }
 
 .cupon {
-  margin-top: 150px;
+  margin-top: 0px;
   -webkit-box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 4.05973px 4.05973px;

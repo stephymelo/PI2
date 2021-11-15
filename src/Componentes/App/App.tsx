@@ -8,13 +8,17 @@ import Descuento from '../Descuento/Descuento';
 import Juego from '../Juego/Juego';
 import Perfil from '../Perfil/Perfil';
 import Login from '../Login/Login';
+import { PerfilObj } from '../../Types/PerfilObj';
+
 
 import {
   BrowserRouter as Router,
   Route,
   HashRouter,
-  Routes} from "react-router-dom";
-import { PerfilObj } from '../../Types/PerfilObj';
+  Routes,
+} from "react-router-dom";
+import CuponElem from '../Cupon/CuponElem/CuponElem';
+import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 
 
 
@@ -23,32 +27,46 @@ import { PerfilObj } from '../../Types/PerfilObj';
 function App() {
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
-  const [isRegister,SetIsRegister] = useState<boolean>(false);
+  const [isRegister, SetIsRegister] = useState<boolean>(false);
   console.log(users);
   const LoginContainer = () => {
     return <Routes><Route path="/" element={
       <Register setUsers={setUsers} users={users} ></Register>
-      
-  }></Route></Routes>
-    
+
+    }></Route></Routes>
+
   }
+
+  // function MasCupones () {
+  //   return (
+
+
+  //       <Routes>
+  //         <Route path='/miscupones/:id' element={<p>Totales</p>} />
+  //       </Routes>
+
+  //   )
+  // }
+
+  
 
   const DefaultContainer = () => {
     return <>
-     <Menu />
-      
+      <Menu />
+
 
       <Routes>
-      <Route path="/miscupones" element={
-          <div>
-            <Header
-              titulo={'Cupones'}
-              descripcion={'Nuestros cupones son de un solo uso'} />
-            <Cupon id={0} titulo={''} fechaVencer={0} descripcion={''} imagenUrl={''} codigoActivable={''} />
-
-
-
-          </div>} >
+        <Route path="miscupones/" element={
+          <><Header
+            titulo={'Cupones'}
+            descripcion={'Nuestros cupones son de un solo uso'} />
+            <Cupon />
+          </>}>
+          
+          <Route path='todos' element={<CuponElem />} />
+          <Route path='activos' element={<CuponActivo/>} />
+          <Route path='expirados' element={<CuponActivo/>} />
+          
 
 
 
@@ -91,16 +109,16 @@ function App() {
 
         <Route path="/login" element={
           <div>
-            <Login id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={undefined} telefono={undefined}/>
+            <Login id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={undefined} telefono={undefined} />
           </div>
         }>
 
         </Route>
       </Routes>
 
-  
 
-     
+
+
     </>
   }
 
@@ -112,8 +130,8 @@ function App() {
 
       <HashRouter>
         <Routes>
-          <Route path="/"  element={<LoginContainer/>}/>
-          <Route path="/menu/*" element={<DefaultContainer/>}/>
+          <Route path="/" element={<LoginContainer />} />
+          <Route path="/menu/*" element={<DefaultContainer />} />
         </Routes>
       </HashRouter>
 

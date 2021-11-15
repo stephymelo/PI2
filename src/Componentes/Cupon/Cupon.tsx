@@ -1,24 +1,34 @@
-import * as React from 'react'; 
+import * as React from 'react';
 import { CuponObj } from "../../Types/CuponObj";
 import CuponElem from './CuponElem/CuponElem';
+import CuponActivo from './CuponElem/CuponActivo';
+import CuponMenu from './CuponMenu';
+
+import {
+    BrowserRouter as Router,
+    Route,
+    HashRouter,
+    Routes,
+    Link,
+    useRoutes,
+    useLocation,
+    matchRoutes,
+    useParams,
+    Outlet
+} from "react-router-dom";
 
 
 
 
-export type CuponProp = CuponObj & {
 
-  
-  
-  }
 
-const Cupon: React.FC<CuponProp> = ({id,titulo,descripcion,fechaVencer,imagenUrl,codigoActivable}) => {
+
+ 
+const Cupon: React.FC<{}> = () => {
     return (
-        <article className="cupones">
-            <CuponElem/>
-
-
-
-
+        <article >
+            <CuponMenu/>
+            <Outlet />
         </article>
     );
 }
