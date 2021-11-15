@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Menu from './../Menu/Menu';
 import Header from '../Header/Header';
@@ -28,19 +28,56 @@ import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 function App() {
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
-  const [isRegister, SetIsRegister] = useState<boolean>(false);
+  const [currentIDUser,setCurrentIDUser] = useState<number>(0);
+  const [currentUser, setCurrentUser] = useState<PerfilObj>({
+    id: 0,
+    nombre: 'userBase',
+    username:'userBase',
+    contra:'0000',
+    correo:'userBase@gmail.com',
+    fechaNacimiento: 8122012,
+    preferencias:[],
+    genero: '',
+    ciudad: 'Tangamandapio',
+    direccion: ''  ,
+    telefono: 11111110 ,
+  });
 
+  useEffect(()=>{
+
+    users.forEach(user=>{
+      console.log({user});
+      if(user.id===currentIDUser){
+        setCurrentUser(user);
+      }
+    })
+    console.log("Llega aqui");
+ },[currentIDUser]);
+
+  const  getLoginUser = (id: number) =>{
+
+    setCurrentIDUser(id); 
+    
+  }
+
+  const addNewUser = (user:PerfilObj) =>{
+    setUsers(
+      [...users, user]
+    )
+  }
+
+  console.log({currentUser});
   const LoginContainer = () => {
     return <> 
     <Routes>
 
 
       <Route path="/" element={
-        <Login></Login>
+        <Login users={users} getLoginUser={getLoginUser}></Login>
       }></Route>
 
       <Route path="/registro" element={
-        <Register setUsers={setUsers} users={users} ></Register>
+        <Register setUsers={setUsers} getLoginUser={getLoginUser} addNewUser={addNewUser}></Register>
       }></Route>
 
     </Routes>
@@ -113,7 +150,7 @@ function App() {
         </Route>
         <Route path="/perfil" element={
           <div>
-            <Perfil id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={''} telefono={0} />
+            <Perfil currentUser={currentUser} />
           </div>
         }>
 

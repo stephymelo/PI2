@@ -12,7 +12,6 @@ interface MenuProp {
 
 const Menu: React.FC<MenuProp> = ({ }, props) => {
     const [selected, setSelected] = useState<string>();
-    console.log(props.location);
     
    
 

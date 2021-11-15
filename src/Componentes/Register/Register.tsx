@@ -11,10 +11,11 @@ import back from "../../Recursos/imagenes/util/BackArrow.svg";
 
 export type RegisterProp =  {
   setUsers : React.Dispatch<React.SetStateAction<PerfilObj[]>>;
-  users : PerfilObj[];
+  addNewUser : (user: PerfilObj) => void;
+  getLoginUser :  (id: number) => void;
   }
 
-export const Register: React.FC<RegisterProp> = ({setUsers, users}) => {
+export const Register: React.FC<RegisterProp> = ({setUsers, addNewUser,getLoginUser}) => {
   let [isComplete, setIsComplete]  = React.useState(false);
   const [name, setname] = React.useState('');
   const handlenameChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -113,7 +114,6 @@ useEffect(()=>{
    if(isComplete){
     addUser();
    }
-    console.log({isComplete});
 },[newUser]);
 
 
@@ -122,18 +122,16 @@ useEffect(()=>{
     setIsComplete(true);
   };
 
-  console.log({newUser});
   const addUser = () =>{
     
-      console.log("DUN");
+      
     if(password === confirmedPassword){
       
-      setUsers(
-        [...users, newUser]
-      )
+
       
-      navigate("/menu/*");
-      
+      navigate("/menu/perfil");
+      getLoginUser(newUser.id);
+      addNewUser(newUser);
       
     }
     
