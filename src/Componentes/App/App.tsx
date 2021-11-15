@@ -82,7 +82,8 @@ function App() {
               fechaVencer: 0,
               descripcion: '',
               imagenUrl: '',
-              codigoActivable: ''
+              codigoActivable: '',
+              status:"activo"
             }} />
           </div>
         }>
