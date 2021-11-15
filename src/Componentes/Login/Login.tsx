@@ -8,14 +8,17 @@ import google from "../../Recursos/logos/IconosSVG/google.svg";
 import facebook from "../../Recursos/logos/IconosSVG/facebook.svg";
 import twitter from "../../Recursos/logos/IconosSVG/twitter.svg";
 import instagram from "../../Recursos/logos/IconosSVG/instagram.svg";
+import { useNavigate } from 'react-router-dom';
 
-export type LoginProp = PerfilObj & {
+export type LoginProp =  {
 
 
 
 }
 
 const Login: React.FC<LoginProp> = ({ }) => {
+
+  let navigate = useNavigate();
   return (
     <div>
       <section className="login">
@@ -42,7 +45,7 @@ const Login: React.FC<LoginProp> = ({ }) => {
         </section>
 
         <section className="login__registroDiv">
-          <h3>¿Primera vez en Efipuntos?</h3><h3 className="login__registroOption">Regístrate</h3>
+          <h3>¿Primera vez en Efipuntos?</h3><h3 className="login__registroOption" onClick={ () =>{navigate("/registro")}}>Regístrate</h3>
         </section>
 
       </section>

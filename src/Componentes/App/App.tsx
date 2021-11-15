@@ -108,13 +108,7 @@ function App() {
 
         </Route>
 
-        <Route path="/login" element={
-          <div>
-            <Login id={0} nombre={''} username={''} contra={''} correo={''} fechaNacimiento={0} preferencias={[]} genero={''} ciudad={''} direccion={undefined} telefono={undefined} />
-          </div>
-        }>
 
-        </Route>
       </Routes>
 
 
