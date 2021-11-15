@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Genero } from '../../Types/Genero';
 import { PerfilObj } from "../../Types/PerfilObj";
 import Inputs from '../Utils/Inputs/Inputs';
+import back from "../../Recursos/imagenes/util/BackArrow.svg";
 
 
 
@@ -142,6 +143,7 @@ useEffect(()=>{
     
         <article className='register'>
         <section className='register__content'>
+          <img src={back} alt="returnLogin" onClick={()=>{navigate(-1)}} />
             <h1 className='register__title'>REGISTRO</h1>
             <form className='register__inputs'>
               <Inputs placeholder={'Nombre Completo'} type={'text'} handleChange={handlenameChange}/>

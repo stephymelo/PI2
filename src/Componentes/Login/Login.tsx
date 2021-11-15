@@ -45,7 +45,7 @@ const Login: React.FC<LoginProp> = ({ }) => {
         </section>
 
         <section className="login__registroDiv">
-          <h3>¿Primera vez en Efipuntos?</h3><h3 className="login__registroOption" onClick={ () =>{navigate("/registro")}}>Regístrate</h3>
+          <h3>¿Primera vez en Efipuntos?</h3><h3 className="login__registroOption" onClick={ () =>{navigate("../registro")}}>Regístrate</h3>
         </section>
 
       </section>

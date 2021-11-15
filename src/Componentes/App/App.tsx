@@ -16,6 +16,7 @@ import {
   Route,
   HashRouter,
   Routes,
+  Outlet,
 } from "react-router-dom";
 import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
@@ -28,13 +29,23 @@ function App() {
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
   const [isRegister, SetIsRegister] = useState<boolean>(false);
-  console.log(users);
+
   const LoginContainer = () => {
-    return <Routes><Route path="/" element={
-      <Register setUsers={setUsers} users={users} ></Register>
+    return <> 
+    <Routes>
 
-    }></Route></Routes>
 
+      <Route path="/" element={
+        <Login></Login>
+      }></Route>
+
+      <Route path="/registro" element={
+        <Register setUsers={setUsers} users={users} ></Register>
+      }></Route>
+
+    </Routes>
+    <Outlet></Outlet> 
+    </>
   }
 
   // function MasCupones () {
@@ -48,7 +59,7 @@ function App() {
   //   )
   // }
 
-  
+
 
   const DefaultContainer = () => {
     return <>
@@ -62,11 +73,11 @@ function App() {
             descripcion={'Nuestros cupones son de un solo uso'} />
             <Cupon />
           </>}>
-          
+
           <Route path='todos' element={<CuponElem />} />
-          <Route path='activos' element={<CuponActivo/>} />
-          <Route path='expirados' element={<CuponActivo/>} />
-          
+          <Route path='activos' element={<CuponActivo />} />
+          <Route path='expirados' element={<CuponActivo />} />
+
 
 
 
@@ -83,7 +94,7 @@ function App() {
               descripcion: '',
               imagenUrl: '',
               codigoActivable: '',
-              status:"activo"
+              status: "activo"
             }} />
           </div>
         }>
@@ -110,9 +121,7 @@ function App() {
 
 
       </Routes>
-
-
-
+      <Outlet></Outlet>
 
     </>
   }
@@ -125,7 +134,7 @@ function App() {
 
       <HashRouter>
         <Routes>
-          <Route path="/" element={<LoginContainer />} />
+          <Route path="/*" element={<LoginContainer />} />
           <Route path="/menu/*" element={<DefaultContainer />} />
         </Routes>
       </HashRouter>
