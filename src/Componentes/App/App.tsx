@@ -9,8 +9,6 @@ import Juego from '../Juego/Juego';
 import Perfil from '../Perfil/Perfil';
 import Login from '../Login/Login';
 import { PerfilObj } from '../../Types/PerfilObj';
-
-
 import {
   BrowserRouter as Router,
   Route,
@@ -20,6 +18,7 @@ import {
 } from "react-router-dom";
 import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
+import { CuponObj } from '../../Types/CuponObj';
 
 
 
@@ -28,81 +27,123 @@ import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 function App() {
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
-  const [currentIDUser,setCurrentIDUser] = useState<number>(0);
+  const [currentIDUser, setCurrentIDUser] = useState<number>(0);
   const [currentUser, setCurrentUser] = useState<PerfilObj>({
     id: 0,
     nombre: 'userBase',
-    username:'userBase',
-    contra:'0000',
-    correo:'userBase@gmail.com',
+    username: 'userBase',
+    contra: '0000',
+    correo: 'userBase@gmail.com',
     fechaNacimiento: 8122012,
-    preferencias:[],
+    preferencias: [],
     genero: '',
     ciudad: 'Tangamandapio',
-    direccion: ''  ,
-    telefono: 11111110 ,
+    direccion: '',
+    telefono: 11111110,
   });
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    users.forEach(user=>{
-      console.log({user});
-      if(user.id===currentIDUser){
+    users.forEach(user => {
+      console.log({ user });
+      if (user.id === currentIDUser) {
         setCurrentUser(user);
       }
     })
     console.log("Llega aqui");
- },[currentIDUser]);
+  }, [currentIDUser]);
 
-  const  getLoginUser = (id: number) =>{
+  const getLoginUser = (id: number) => {
 
-    setCurrentIDUser(id); 
-    
+    setCurrentIDUser(id);
   }
 
-  const addNewUser = (user:PerfilObj) =>{
+  const addNewUser = (user: PerfilObj) => {
     setUsers(
       [...users, user]
     )
   }
+  
+  const [cuponElems, setCuponElems] = React.useState<CuponObj[]>([
+    {
+      id: 0,
+      titulo: 'descuento',
+      descripcion: 'aa',
+      fechaVencer: '30-20-20',
+      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      codigoActivable: 'A00897',
+      status: 'activo'
+    },
+    {
+      id: 1,
+      titulo: 'descuento',
+      descripcion: 'aa',
+      fechaVencer: '30-20-20',
+      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      codigoActivable: 'A00897',
+      status: 'activo'
+    },
+    {
+      id: 2,
+      titulo: 'descuento',
+      descripcion: 'aa',
+      fechaVencer: '30-20-20',
+      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      codigoActivable: 'A00897',
+      status: 'activo'
+    }
 
-  console.log({currentUser});
-  const LoginContainer = () => {
-    return <> 
-    <Routes>
 
+  ]);
 
-      <Route path="/" element={
-        <Login users={users} getLoginUser={getLoginUser}></Login>
-      }></Route>
+  const handleCreate = (newCuponElem: { title: string, descripcion: string, fechaVencer: string, imagenUrl: string, codigoActivable: string, status: 'activo' }) => {
+    const newArray = [
+      ...cuponElems,
+      {
+        id: Math.random(),
+        titulo: newCuponElem.title,
+        descripcion: newCuponElem.descripcion,
+        fechaVencer: newCuponElem.fechaVencer,
+        imagenUrl: newCuponElem.imagenUrl,
+        codigoActivable: newCuponElem.codigoActivable,
+        status: newCuponElem.status
 
-      <Route path="/registro" element={
-        <Register setUsers={setUsers} getLoginUser={getLoginUser} addNewUser={addNewUser}></Register>
-      }></Route>
-
-    </Routes>
-    <Outlet></Outlet> 
-    </>
+      }
+    ];
+    setCuponElems(newArray);
   }
 
-  // function MasCupones () {
-  //   return (
+
+  const AllCupones: Function = (groups: any[]): JSX.Element[] => {
+    return (cuponElems.map((elem) => {
+      return <CuponElem key={elem.id} {...elem} status="activo" />;
+    }));
+  }
+
+  console.log({ currentUser });
+  const LoginContainer = () => {
+    return <>
+      <Routes>
 
 
-  //       <Routes>
-  //         <Route path='/miscupones/:id' element={<p>Totales</p>} />
-  //       </Routes>
+        <Route path="/" element={
+          <Login users={users} getLoginUser={getLoginUser}></Login>
+        }></Route>
 
-  //   )
-  // }
+        <Route path="/registro" element={
+          <Register setUsers={setUsers} getLoginUser={getLoginUser} addNewUser={addNewUser}></Register>
+        }></Route>
+
+      </Routes>
+      <Outlet></Outlet>
+    </>
+  }
 
 
 
   const DefaultContainer = () => {
     return <>
       <Menu />
-
-
       <Routes>
         <Route path="miscupones/" element={
           <><Header
@@ -111,12 +152,9 @@ function App() {
             <Cupon />
           </>}>
 
-          <Route path='todos' element={<CuponElem />} />
+          <Route path='todos' element={<div className="allCupones"><AllCupones /></div>} />
           <Route path='activos' element={<CuponActivo />} />
           <Route path='expirados' element={<CuponActivo />} />
-
-
-
 
         </Route>
         <Route path="/juegos" element={
@@ -127,7 +165,7 @@ function App() {
             <Juego id={0} titulo={''} description={''} placeholderImg={''} cupon={{
               id: 0,
               titulo: '',
-              fechaVencer: 0,
+              fechaVencer: '0',
               descripcion: '',
               imagenUrl: '',
               codigoActivable: '',
@@ -160,6 +198,12 @@ function App() {
       </Routes>
       <Outlet></Outlet>
 
+
+
+
+
+
+
     </>
   }
 
@@ -179,5 +223,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
