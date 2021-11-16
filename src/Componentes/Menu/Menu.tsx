@@ -11,7 +11,7 @@ interface MenuProp {
 }
 
 const Menu: React.FC<MenuProp> = ({ }, props) => {
-    const [selected, setSelected] = useState<string>();
+    const [selected, setSelected] = useState<string>("linkCupones");
     console.log(props.location);
     
    

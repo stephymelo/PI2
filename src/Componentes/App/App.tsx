@@ -9,8 +9,6 @@ import Juego from '../Juego/Juego';
 import Perfil from '../Perfil/Perfil';
 import Login from '../Login/Login';
 import { PerfilObj } from '../../Types/PerfilObj';
-
-
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +17,7 @@ import {
 } from "react-router-dom";
 import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
+import { CuponObj } from '../../Types/CuponObj';
 
 
 
@@ -37,16 +36,63 @@ function App() {
 
   }
 
-  // function MasCupones () {
-  //   return (
+
+  const [cuponElems,setCuponElems] = React.useState<CuponObj[]>([
+    {
+      id:0,
+      titulo: 'descuento',
+      descripcion: 'aa',
+      fechaVencer: '30-20-20',
+      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      codigoActivable:'A00897',
+      status:'activo'
+     },
+     {
+      id:1,
+      titulo: 'descuento',
+      descripcion: 'aa',
+      fechaVencer: '30-20-20',
+      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      codigoActivable:'A00897',
+      status:'activo'
+     },
+     {
+      id:2,
+      titulo: 'descuento',
+      descripcion: 'aa',
+      fechaVencer: '30-20-20',
+      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      codigoActivable:'A00897',
+      status:'activo'
+     }
+       
+ 
+   ]);
+
+   const handleCreate = (newCuponElem: { title: string, descripcion: string, fechaVencer: string, imagenUrl: string, codigoActivable: string, status: 'activo' }) => {
+    const newArray = [
+      ...cuponElems,
+      {
+        id: Math.random(),
+        titulo: newCuponElem.title,
+        descripcion: newCuponElem.descripcion,
+        fechaVencer: newCuponElem.fechaVencer,
+        imagenUrl: newCuponElem.imagenUrl,
+        codigoActivable: newCuponElem.codigoActivable,
+        status: newCuponElem.status
+
+      }
+    ];
+    setCuponElems(newArray);
+  }
 
 
-  //       <Routes>
-  //         <Route path='/miscupones/:id' element={<p>Totales</p>} />
-  //       </Routes>
+  const AllCupones: Function = (groups: any[]): JSX.Element[] => {
+    return (cuponElems.map((elem) => {
+      return <CuponElem key={elem.id} {...elem} status="activo"  />;
+    }));
+  }
 
-  //   )
-  // }
 
   
 
@@ -63,12 +109,11 @@ function App() {
             <Cupon />
           </>}>
           
-          <Route path='todos' element={<CuponElem />} />
+          <Route path='todos' element={<div className="allCupones"><AllCupones/></div>} />
+
+
           <Route path='activos' element={<CuponActivo/>} />
           <Route path='expirados' element={<CuponActivo/>} />
-          
-
-
 
         </Route>
         <Route path="/juegos" element={
@@ -79,7 +124,7 @@ function App() {
             <Juego id={0} titulo={''} description={''} placeholderImg={''} cupon={{
               id: 0,
               titulo: '',
-              fechaVencer: 0,
+              fechaVencer: '0',
               descripcion: '',
               imagenUrl: '',
               codigoActivable: '',

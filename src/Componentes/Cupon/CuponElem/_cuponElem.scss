@@ -1,8 +1,16 @@
+.allCupones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 .cupon{
-    margin-top:0px;
+    margin-top:20px;
     box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 4.05973px 4.05973px;
     max-width: 160px;
+    margin-left:30px;
     &__section{
        
         border-radius: 9px;

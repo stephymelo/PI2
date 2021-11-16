@@ -2,7 +2,7 @@
 export type CuponObj = {
     id: number;
     titulo:string;
-    fechaVencer:number;
+    fechaVencer:string;
     descripcion:string;
     imagenUrl:string;
     codigoActivable:string;

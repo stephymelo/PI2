@@ -261,7 +261,7 @@ button {
 }
 
 .cupones__span--selected {
-  color: #689ECE;
+  color: #32286D;
   height: 2px;
 }
 
@@ -273,7 +273,7 @@ button {
 .cupones__span__line {
   position: fixed;
   margin-top: 7px;
-  width: 100px;
+  width: 105px;
   height: 4px;
   margin-left: -20px;
   display: none;
@@ -281,8 +281,8 @@ button {
 }
 
 .cupones__span__line--selected {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: margin-right 4s, color 1s;
+  transition: margin-right 4s, color 1s;
   background-color: #53C2EA;
   display: block;
 }
@@ -296,12 +296,25 @@ button {
   background-color: gray;
 }
 
+.allCupones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .cupon {
-  margin-top: 0px;
+  margin-top: 20px;
   -webkit-box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
   border-radius: 0px 0px 4.05973px 4.05973px;
   max-width: 160px;
+  margin-left: 30px;
 }
 
 .cupon__section {

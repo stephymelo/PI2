@@ -12,12 +12,13 @@ import {
 const CuponMenu: React.FC<{}> = () => {
 
 
-    const [selected, setSelected] = useState<string>();
+    const [selected, setSelected] = useState<string>("linkTodos");
     
    
 
     const handleSelected = (id: string) => {
         setSelected(id);
+        
     }
     
 
@@ -38,11 +39,13 @@ const CuponMenu: React.FC<{}> = () => {
                 <li>
                     <Link to={`activos`} className={selected === "linkActivos"? 'cupones__span cupones__span--selected' : 'cupones__span'} onClick={()=>{handleSelected("linkActivos")}}>
                         <span className="cupones__span__title">Activos</span>
+                        <div className={selected === "linkActivos"?  'cupones__span__line cupones__span__line--selected' : 'cupones__span__line'} ></div>
                     </Link>
                 </li>
                 <li>
                     <Link to={`expirados`} className={selected === "linkExpi"? 'cupones__span cupones__span--selected' : 'cupones__span'} onClick={()=>{handleSelected("linkExpi")}}>
                         <span className="cupones__span__title">Expirados</span>
+                        <div className={selected === "linkExpi"?  'cupones__span__line cupones__span__line--selected' : 'cupones__span__line'} ></div>
                     </Link>
                 </li>
             </ul>
