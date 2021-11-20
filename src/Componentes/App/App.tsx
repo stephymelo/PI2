@@ -176,7 +176,7 @@ function App() {
               descripcion={'Juega para ganar cupones exclusivos de nuestros productos'} />
               <Juego />
              <Route path='juego' element={<JuegoElem/>} /> 
-             <Route path='juego' element={<RetoElem/>} /> 
+             <Route path='reto' element={<RetoElem/>} /> 
           </>
         }>
 
