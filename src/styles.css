@@ -108,7 +108,7 @@ button {
 .textfield {
   position: relative;
   width: 100%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   cursor: pointer;
 }
 
@@ -893,9 +893,27 @@ button {
           transform: rotate(-100deg);
 }
 
+.register__img {
+  position: absolute;
+  top: -88px;
+  left: 94px;
+}
+
+.register__arrowBack {
+  position: absolute;
+  top: 62px;
+  left: 20px;
+}
+
+.register__content {
+  margin-top: 0px;
+}
+
 .register__title {
   color: #775BA3;
   margin-top: 192px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .register__inputs {

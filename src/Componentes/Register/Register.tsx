@@ -6,6 +6,7 @@ import { Genero } from '../../Types/Genero';
 import { PerfilObj } from "../../Types/PerfilObj";
 import Inputs from '../Utils/Inputs/Inputs';
 import back from "../../Recursos/imagenes/util/BackArrow.svg";
+import e from "../../Recursos/imagenes/register/e.png";
 
 
 
@@ -140,10 +141,11 @@ useEffect(()=>{
     return (
     
         <article className='register'>
+          <img className="register__img" src={e}/>
+          <img className="register__arrowBack" src={back} alt="returnLogin" onClick={()=>{navigate(-1)}} />
         <section className='register__content'>
-          <img src={back} alt="returnLogin" onClick={()=>{navigate(-1)}} />
-            <h1 className='register__title'>REGISTRO</h1>
-            <form className='register__inputs'>
+          <h1 className='register__title'>REGISTRO</h1>
+          <form className='register__inputs'>
               <Inputs placeholder={'Nombre Completo'} type={'text'} handleChange={handlenameChange}/>
               <Inputs placeholder={'Usuario'} type={'text'} handleChange={handleUsernameChange}/>
               <Inputs placeholder={'Correo eléctronico'} type={"text"} handleChange={handleCorreoChange}/> 
