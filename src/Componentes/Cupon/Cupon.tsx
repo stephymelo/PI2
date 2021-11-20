@@ -1,6 +1,4 @@
 import * as React from 'react';
-import CuponElem from './CuponElem/CuponElem';
-import CuponActivo from './CuponElem/CuponActivo';
 import CuponMenu from './CuponMenu';
 import {
     BrowserRouter as Router,

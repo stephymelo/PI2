@@ -441,8 +441,84 @@ button {
   right: -15px;
 }
 
+.cupon__expirado {
+  max-width: 380px;
+  margin-left: 30px;
+  margin-right: 30px;
+  position: relative;
+}
+
+.cupon__expirado__section {
+  position: relative;
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cupon__expirado__section--1 {
+  border-radius: 8px 0 0 8px;
+  background-color: gray;
+  width: 80%;
+}
+
+.cupon__expirado__section--1__vence {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.cupon__expirado__section--2 {
+  background-color: #FFFFFF;
+  border-radius: 0 8px 8px 0;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cupon__expirado__section--2 .rotate {
+  transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+}
+
+.cupon__expirado .dot {
+  height: 30px;
+  width: 30px;
+  background-color: #F1F1F1;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  margin-top: 12%;
+  margin-left: -15px;
+}
+
+.cupon__expirado .dot--1 {
+  right: -15px;
+}
+
 .cuponPopup {
-  display: none;
+  width: 200px;
+  position: absolute;
+  margin-left: 100px;
+}
+
+.cuponPopup__article--1 {
+  background-color: #629540;
+  height: 100px;
+}
+
+.cuponPopup__article--2 {
+  background-color: white;
 }
 
 .dicountList {
@@ -676,6 +752,64 @@ button {
   color: white;
   font-size: 13px;
   margin-top: 13px;
+}
+
+.juegos {
+  margin-left: 0px;
+  margin-top: 140px;
+}
+
+.juegos__menu {
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.juegos__span {
+  color: #775BA3;
+}
+
+.juegos__span--selected {
+  color: #32286D;
+  height: 2px;
+}
+
+.juegos__span__title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.juegos__span__line {
+  position: fixed;
+  margin-top: 7px;
+  width: 105px;
+  height: 4px;
+  margin-left: -20px;
+  display: none;
+  border-radius: 5px;
+}
+
+.juegos__span__line--selected {
+  -webkit-transition: margin-right 4s, color 1s;
+  transition: margin-right 4s, color 1s;
+  background-color: #53C2EA;
+  display: block;
+}
+
+.juegos__line {
+  margin-top: 8px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 86%;
+  height: 2px;
+  background-color: gray;
 }
 
 .gameList {
@@ -1292,6 +1426,71 @@ button {
 
 .popUp__button {
   margin-bottom: 10px;
+}
+
+.preferencesDiv {
+  width: 100%;
+  color: #FFFFFF;
+  padding: 65px 25px;
+}
+
+.titles {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: Nunito;
+  font-weight: 700;
+}
+
+.subtitles {
+  font-size: 17px;
+  font-family: Nunito;
+  margin-bottom: 20px;
+}
+
+.preferenceOptionDiv {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.preferenceOption {
+  width: 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.preferenceOption__img {
+  width: 95px;
+}
+
+.preferenceOption__title {
+  margin-top: 5px;
+  font-size: 13px;
+  font-family: Nunito;
+  font-weight: normal;
+  text-align: center;
 }
 
 @font-face {

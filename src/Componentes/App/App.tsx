@@ -33,7 +33,7 @@ import { RetoElem } from '../Juego/JuegoElem/RetoElem';
 
 function App() {
 
-  
+
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
   const [currentIDUser, setCurrentIDUser] = useState<number>(0);
@@ -72,7 +72,7 @@ function App() {
       [...users, user]
     )
   }
-  
+
   const [cuponElems, setCuponElems] = React.useState<CuponObj[]>([
     {
       id: 3,
@@ -127,7 +127,7 @@ function App() {
 
   const AllCupones: Function = (groups: any[]): JSX.Element[] => {
     return (cuponElems.map((elem) => {
-      return <CuponElem key={elem.id} {...elem} SetCuponSelected={SetCuponSelected}/>;
+      return <CuponElem key={elem.id} {...elem} SetCuponSelected={SetCuponSelected} />;
     }));
   }
 
@@ -157,10 +157,12 @@ function App() {
 
 
   const DefaultContainer = () => {
-    console.log({cuponElems});
+    console.log({ cuponElems });
     return <>
       <Menu />
       <Routes>
+
+        {/* MIS CUPONES RUTAS */}
         <Route path="miscupones/" element={
           <><Header
             titulo={'Cupones'}
@@ -169,25 +171,32 @@ function App() {
           </>}>
 
           <Route path='todos' element={<div className="allCupones">
-            <AllCupones /> 
-            {cuponSelected? <CuponPopup cuponElems={cuponElems} cuponSelected={cuponSelected} SetCuponSelected={SetCuponSelected} setCuponElems={setCuponElems}/> : <h1></h1>}
+            <AllCupones />
+            {cuponSelected ? <CuponPopup cuponElems={cuponElems} cuponSelected={cuponSelected} SetCuponSelected={SetCuponSelected} setCuponElems={setCuponElems} /> : <h1></h1>}
           </div>} />
           <Route path='activos' element={<CuponActivo />} />
           <Route path='expirados' element={<CuponExpirado />} />
 
         </Route>
-        <Route path="juegos/" element={
-          <>
-            <Header
-              titulo={'Juegos'}
-              descripcion={'Juega para ganar cupones exclusivos de nuestros productos'} />
-              <Juego />
-             <Route path='juego' element={<JuegoElem/>} /> 
-             <Route path='reto' element={<RetoElem/>} /> 
-          </>
-        }>
 
+
+        {/* JUEGOS RUTAS */}
+        <Route path="juegos/*" element={
+          <><Header
+            titulo={'Juegos'}
+            descripcion={'Juega para ganar cupones exclusivos'} />
+            <Juego />
+          </>}>
+
+          <Route path='juegos' element={<div><h1>help</h1>
+            <JuegoElem />
+          </div>} />
+          <Route path='retos' element={<RetoElem />} />
         </Route>
+
+
+
+        {/* DESCUENTO */}
         <Route path="/descuentos" element={
           <div>
             <Header
@@ -212,7 +221,7 @@ function App() {
             <Header
               titulo={'Actividades'}
               descripcion={'Gana premios por realizar los retos con los productos seleccionados'} />
-            <RetoDesc/>
+            <RetoDesc />
           </div>
         }>
         </Route>
@@ -222,12 +231,14 @@ function App() {
             <Header
               titulo={'Actividades'}
               descripcion={'Toma una fotografia del reto finalizado'} />
-            <RetoFoto/>
+            <RetoFoto />
           </div>
         }>
         </Route>
 
       </Routes>
+
+
       <Outlet></Outlet>
 
 
