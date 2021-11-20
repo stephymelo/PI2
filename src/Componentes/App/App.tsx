@@ -20,6 +20,8 @@ import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 import { CuponObj } from '../../Types/CuponObj';
 import { CuponPopup } from '../Cupon/CuponElem/CuponPopup';
+import { RetoDesc } from '../Juego/RetoDesc/RetoDesc';
+import { RetoFoto } from '../Juego/RetoFoto/RetoFoto';
 
 
 
@@ -192,6 +194,25 @@ function App() {
 
         </Route>
 
+        <Route path="/retoDesc" element={
+          <div>
+            <Header
+              titulo={'Actividades'}
+              descripcion={'Gana premios por realizar los retos con los productos seleccionados'} />
+            <RetoDesc/>
+          </div>
+        }>
+        </Route>
+
+        <Route path="/retoFoto" element={
+          <div>
+            <Header
+              titulo={'Actividades'}
+              descripcion={'Toma una fotografia del reto finalizado'} />
+            <RetoFoto/>
+          </div>
+        }>
+        </Route>
 
       </Routes>
       <Outlet></Outlet>
