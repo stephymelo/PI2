@@ -20,6 +20,7 @@ import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 import { CuponObj } from '../../Types/CuponObj';
 import { CuponPopup } from '../Cupon/CuponElem/CuponPopup';
+import PreferencesSelection from '../PreferencesSelection/PreferencesSelection';
 
 
 
@@ -135,6 +136,10 @@ function App() {
 
         <Route path="/registro" element={
           <Register setUsers={setUsers} getLoginUser={getLoginUser} addNewUser={addNewUser}></Register>
+        }></Route>
+
+        <Route path="/preferences" element={
+          <PreferencesSelection></PreferencesSelection>
         }></Route>
 
       </Routes>
