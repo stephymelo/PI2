@@ -1,11 +1,12 @@
 .gameList {
-    margin: 142px 16px 0px;
+    margin: 197px 16px 82px 16px;
 
 
     &__title {
         font-size: 17px;
         color: #32286D;
-        margin: 15px 0px 18px 13px;
+        margin: 15px 0px 18px 0px;
+        text-align: left;
     }
 }
 
@@ -32,6 +33,7 @@
         height: 89px;
         position: relative;
         border-radius: 0px 0px 4px 4px;
+        text-align: left;
     }
 
     &__name {
@@ -97,6 +99,7 @@
     border-radius: 4px;
     position: relative;
     margin-bottom: 20px;
+    text-align: left;
 
     &--blue {
         background-color:#1A79BC
@@ -116,8 +119,8 @@
 
 .titleGame {
     color: white;
-    font-size: 17px;
     margin-top: 10px;
+    font-size: 24px;
 }
 
 .descriptGame {

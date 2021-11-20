@@ -441,6 +441,10 @@ button {
   right: -15px;
 }
 
+.cuponPopup {
+  display: none;
+}
+
 .dicountList {
   margin: 150px 16px 80px;
   overflow: scroll;
@@ -675,13 +679,14 @@ button {
 }
 
 .gameList {
-  margin: 142px 16px 0px;
+  margin: 197px 16px 82px 16px;
 }
 
 .gameList__title {
   font-size: 17px;
   color: #32286D;
-  margin: 15px 0px 18px 13px;
+  margin: 15px 0px 18px 0px;
+  text-align: left;
 }
 
 .lastGame {
@@ -715,6 +720,7 @@ button {
   height: 89px;
   position: relative;
   border-radius: 0px 0px 4px 4px;
+  text-align: left;
 }
 
 .lastGame__name {
@@ -793,6 +799,7 @@ button {
   border-radius: 4px;
   position: relative;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .moreGameCard--blue {
@@ -818,8 +825,8 @@ button {
 
 .titleGame {
   color: white;
-  font-size: 17px;
   margin-top: 10px;
+  font-size: 24px;
 }
 
 .descriptGame {
@@ -1077,12 +1084,14 @@ button {
 
 .login {
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .login__background {
   position: absolute;
-  top: -160px;
-  right: -175px;
+  top: -178px;
+  right: -158px;
 }
 
 .login__inputsDiv {
@@ -1101,7 +1110,7 @@ button {
 
 .login__olvidasteContra {
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   color: #32286d;
 }
 
@@ -1123,7 +1132,7 @@ button {
 
 .login__iconsDiv {
   width: 40%;
-  margin-top: 15px;
+  margin-top: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

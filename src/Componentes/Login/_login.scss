@@ -1,11 +1,12 @@
 .login{
     width: 100%;
-  
+    overflow: hidden;
+    position: relative;
 
     &__background{
         position: absolute;
-        top: -160px;
-        right: -175px;
+        top: -178px;
+        right: -158px;
     }
 
     &__inputsDiv{
@@ -24,7 +25,7 @@
 
     &__olvidasteContra{
         text-align: left;
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         color:rgba(50, 40, 109, 1);
     }
 
@@ -39,7 +40,7 @@
 
     &__iconsDiv{
         width: 40%;
-        margin-top: 15px;
+        margin-top: 9px;
         display: flex;
         justify-content: space-between;
     }
