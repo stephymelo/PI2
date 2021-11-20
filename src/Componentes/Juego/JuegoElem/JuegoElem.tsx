@@ -9,12 +9,12 @@ interface JuegoElem {
 
 export const JuegoElem: React.FC<JuegoElem> = () => {
     const styles: React.CSSProperties = {
-        backgroundImage: toshGame,
+        backgroundImage:"url(" + { toshGame } + ")",
       };
     return (
         <section className="gameList">
         <h2 className="gameList__title">Último lanzamiento</h2>
-        <article className="lastGame" style={styles}>
+        <article className="lastGame" style={{ backgroundImage:`url(${toshGame})` }}>
             <img className="lastGame__logo" src={toshLogo}/>
             <div className="lastGame__rect">
                 <h1 className="lastGame__name">Torres de galleta</h1>
