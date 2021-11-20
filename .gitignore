@@ -6,7 +6,7 @@
 .pnp.js
 
 #styles
-src/style.css
+src/styles.css
 src/styles.css.map
 
 # testing
