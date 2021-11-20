@@ -130,7 +130,7 @@ useEffect(()=>{
       
 
       
-      navigate("/menu/perfil");
+      navigate("/preferences");
       getLoginUser(newUser.id);
       addNewUser(newUser);
       

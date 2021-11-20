@@ -1,0 +1,44 @@
+
+.retoFoto{
+    width: 100%;
+}
+.retoFoto{
+    width: 100%;
+    padding: 165px 16px;
+    text-align: left;
+    color: #32286D;
+    font-family: Nunito;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+
+    
+    &__title{
+        width: 100%;
+        font-size: 24px;
+        margin-bottom: 5px;
+        font-weight: 900;
+        color: #32286D;
+        font-family: Nunito;
+    }
+
+    &__img{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    &__btnDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 28px;
+    }
+
+    
+    &__button{
+        width: 50%;
+        margin-top: 25px;
+    }
+}
