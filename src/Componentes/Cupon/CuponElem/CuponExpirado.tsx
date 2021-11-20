@@ -9,20 +9,18 @@ interface CuponExpirado {
 const CuponExpirado: React.FC<CuponExpirado> = ({ }) => {
 
     return (
-        <article className='cupon'>
-            <div className='cupon__section'>
-                <img className='cupon__section--1__zigzag' src={zigZag} />
-                <div className='cupon__section--1'>
+        <article className='cupon__expirado'>
+            <div className='cupon__expirado__section'>
+                <div className='cupon__expirado__section--1'>
                     <img className='cupon__section--1__logo' src={colcafeLogo}></img>
+                    <h3 className="cupon__expirado__section--1__vence">Vencio 20-05</h3>
+                </div>
+                <div className="cupon__expirado__section--2">
+                    <h3 className="rotate">B453V</h3>
+                </div>
+                <span className="dot"></span>
+                <span className="dot--1 dot"></span>
 
-                </div>
-                <div className='cupon__section--2'>
-                    <h2 className="cupon__section--2__titulo">35% en galletas</h2>
-                </div>
-                <div className='cupon__section--3'>
-                    <h3 className="cupon__section--3__vence">Vence en 3 dias</h3>
-                    <p className="cupon__section--3__fecha">30-10-2021</p>
-                </div>
             </div>
         </article>
 
