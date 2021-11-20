@@ -22,6 +22,10 @@ import { CuponObj } from '../../Types/CuponObj';
 import { CuponPopup } from '../Cupon/CuponElem/CuponPopup';
 import { RetoDesc } from '../Juego/RetoDesc/RetoDesc';
 import { RetoFoto } from '../Juego/RetoFoto/RetoFoto';
+import PreferencesSelection from '../PreferencesSelection/PreferencesSelection';
+import CuponExpirado from '../Cupon/CuponElem/CuponExpirado';
+import { JuegoElem } from '../Juego/JuegoElem/JuegoElem';
+import { RetoElem } from '../Juego/JuegoElem/RetoElem';
 
 
 
@@ -71,8 +75,8 @@ function App() {
   
   const [cuponElems, setCuponElems] = React.useState<CuponObj[]>([
     {
-      id: 0,
-      titulo: 'descuento',
+      id: 3,
+      titulo: 'jhon si que jode',
       descripcion: 'aa',
       fechaVencer: '30-20-20',
       imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
@@ -101,6 +105,8 @@ function App() {
 
   ]);
 
+  const [cuponSelected, SetCuponSelected] = React.useState<number>();
+
   const handleCreate = (newCuponElem: { title: string, descripcion: string, fechaVencer: string, imagenUrl: string, codigoActivable: string, status: 'activo' }) => {
     const newArray = [
       ...cuponElems,
@@ -121,7 +127,7 @@ function App() {
 
   const AllCupones: Function = (groups: any[]): JSX.Element[] => {
     return (cuponElems.map((elem) => {
-      return <CuponElem key={elem.id} {...elem} />;
+      return <CuponElem key={elem.id} {...elem} SetCuponSelected={SetCuponSelected}/>;
     }));
   }
 
@@ -139,6 +145,10 @@ function App() {
           <Register setUsers={setUsers} getLoginUser={getLoginUser} addNewUser={addNewUser}></Register>
         }></Route>
 
+        <Route path="/preferences" element={
+          <PreferencesSelection></PreferencesSelection>
+        }></Route>
+
       </Routes>
       <Outlet></Outlet>
     </>
@@ -147,6 +157,7 @@ function App() {
 
 
   const DefaultContainer = () => {
+    console.log({cuponElems});
     return <>
       <Menu />
       <Routes>
@@ -157,21 +168,23 @@ function App() {
             <Cupon />
           </>}>
 
-          <Route path='todos' element={<div className="allCupones"><AllCupones /> <CuponPopup />
-          
-          
+          <Route path='todos' element={<div className="allCupones">
+            <AllCupones /> 
+            {cuponSelected? <CuponPopup cuponElems={cuponElems} cuponSelected={cuponSelected} SetCuponSelected={SetCuponSelected} setCuponElems={setCuponElems}/> : <h1></h1>}
           </div>} />
           <Route path='activos' element={<CuponActivo />} />
-          <Route path='expirados' element={<CuponActivo />} />
+          <Route path='expirados' element={<CuponExpirado />} />
 
         </Route>
-        <Route path="/juegos" element={
-          <div>
+        <Route path="juegos/" element={
+          <>
             <Header
               titulo={'Juegos'}
               descripcion={'Juega para ganar cupones exclusivos de nuestros productos'} />
-            <Juego />
-          </div>
+              <Juego />
+             <Route path='juego' element={<JuegoElem/>} /> 
+             <Route path='reto' element={<RetoElem/>} /> 
+          </>
         }>
 
         </Route>

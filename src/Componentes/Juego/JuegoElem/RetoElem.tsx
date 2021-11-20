@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Reto.css';
 
 interface RetoElem {
 }
