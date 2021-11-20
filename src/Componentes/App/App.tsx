@@ -19,12 +19,15 @@ import {
 import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 import { CuponObj } from '../../Types/CuponObj';
+import { CuponPopup } from '../Cupon/CuponElem/CuponPopup';
 
 
 
 
 
 function App() {
+
+  
 
   const [users, setUsers] = useState<PerfilObj[]>([]);
   const [currentIDUser, setCurrentIDUser] = useState<number>(0);
@@ -72,7 +75,7 @@ function App() {
       fechaVencer: '30-20-20',
       imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
       codigoActivable: 'A00897',
-      status: 'activo'
+      status: 'noactivos'
     },
     {
       id: 1,
@@ -81,7 +84,7 @@ function App() {
       fechaVencer: '30-20-20',
       imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
       codigoActivable: 'A00897',
-      status: 'activo'
+      status: 'noactivos'
     },
     {
       id: 2,
@@ -90,7 +93,7 @@ function App() {
       fechaVencer: '30-20-20',
       imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
       codigoActivable: 'A00897',
-      status: 'activo'
+      status: 'noactivos'
     }
 
 
@@ -116,7 +119,7 @@ function App() {
 
   const AllCupones: Function = (groups: any[]): JSX.Element[] => {
     return (cuponElems.map((elem) => {
-      return <CuponElem key={elem.id} {...elem} status="activo" />;
+      return <CuponElem key={elem.id} {...elem} />;
     }));
   }
 
@@ -152,7 +155,10 @@ function App() {
             <Cupon />
           </>}>
 
-          <Route path='todos' element={<div className="allCupones"><AllCupones /></div>} />
+          <Route path='todos' element={<div className="allCupones"><AllCupones /> <CuponPopup />
+          
+          
+          </div>} />
           <Route path='activos' element={<CuponActivo />} />
           <Route path='expirados' element={<CuponActivo />} />
 
@@ -162,15 +168,7 @@ function App() {
             <Header
               titulo={'Juegos'}
               descripcion={'Juega para ganar cupones exclusivos de nuestros productos'} />
-            <Juego id={0} titulo={''} description={''} placeholderImg={''} cupon={{
-              id: 0,
-              titulo: '',
-              fechaVencer: '0',
-              descripcion: '',
-              imagenUrl: '',
-              codigoActivable: '',
-              status: "activo"
-            }} />
+            <Juego />
           </div>
         }>
 
