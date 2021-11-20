@@ -188,7 +188,7 @@ function App() {
             <Juego />
           </>}>
 
-          <Route path='juegos' element={<div><h1>help</h1>
+          <Route path='juegos' element={<div>
             <JuegoElem />
           </div>} />
           <Route path='retos' element={<RetoElem />} />
