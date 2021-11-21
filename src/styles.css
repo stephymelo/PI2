@@ -506,6 +506,11 @@ button {
   right: -15px;
 }
 
+.contenedorCuponActivo {
+  width: 100%;
+  height: 100%;
+}
+
 .cuponPopup {
   width: 200px;
   position: absolute;
@@ -518,6 +523,21 @@ button {
 }
 
 .cuponPopup__article--2 {
+  background-color: white;
+}
+
+.cuponQr {
+  width: 200px;
+  position: absolute;
+  margin-left: 100px;
+}
+
+.cuponQr__article--1 {
+  background-color: #629540;
+  height: 100px;
+}
+
+.cuponQr__article--2 {
   background-color: white;
 }
 

@@ -20,6 +20,7 @@ import CuponElem from '../Cupon/CuponElem/CuponElem';
 import CuponActivo from '../Cupon/CuponElem/CuponActivo';
 import { CuponObj } from '../../Types/CuponObj';
 import { CuponPopup } from '../Cupon/CuponElem/CuponPopup';
+import { CuponQR } from '../Cupon/CuponElem/CuponQR';
 import { RetoDesc } from '../Juego/RetoDesc/RetoDesc';
 import { RetoFoto } from '../Juego/RetoFoto/RetoFoto';
 import PreferencesSelection from '../PreferencesSelection/PreferencesSelection';
@@ -174,7 +175,10 @@ function App() {
             <AllCupones />
             {cuponSelected ? <CuponPopup cuponElems={cuponElems} cuponSelected={cuponSelected} SetCuponSelected={SetCuponSelected} setCuponElems={setCuponElems} /> : <h1></h1>}
           </div>} />
-          <Route path='activos' element={<CuponActivo />} />
+          <Route path='activos' element={<div className="contenedorCuponActivo">
+            <CuponActivo />
+            <CuponQR/>
+            </div>} />
           <Route path='expirados' element={<CuponExpirado />} />
 
         </Route>
