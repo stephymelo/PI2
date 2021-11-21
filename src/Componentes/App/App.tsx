@@ -147,7 +147,7 @@ function App() {
         }></Route>
 
         <Route path="/preferences" element={
-          <PreferencesSelection></PreferencesSelection>
+          <PreferencesSelection currentUser={currentUser} setUsers={setUsers} setCurrentUser={setCurrentUser} users={users} ></PreferencesSelection>
         }></Route>
 
       </Routes>
