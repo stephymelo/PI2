@@ -7,7 +7,7 @@ export type PerfilObj = {
     contra:string;
     correo:string;
     fechaNacimiento:number;
-    preferencias:[],
+    preferencias:string[],
     genero: Genero,
     ciudad: string,
     direccion: string|undefined ,

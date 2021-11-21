@@ -1,3 +1,10 @@
+.containerPreferences{
+    width: 100%;
+    height: 100%;
+    background-color:$principal;
+}
+
+
 .preferencesDiv{
     width: 100%;
     color: #FFFFFF;
@@ -36,6 +43,10 @@
 
     &__img{
         width: 95px;
+
+        &--selected{
+            filter: grayscale(1);
+        }
     }
 
     &__title{
