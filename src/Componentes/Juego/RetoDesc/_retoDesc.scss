@@ -1,6 +1,6 @@
 .retoDesc{
     width: 100%;
-    margin: 132px 0px;
+    margin: 132px 0px 0px 0px;
     padding: 0px 16px;
     text-align: left;
     color: #32286D;
@@ -12,20 +12,19 @@
 
     &__titleDiv{
         width: 100%;
-        margin-top: 45px;
+        margin-top: 25px;
     }
 
     &__title{
-        font-size: 24px;
         margin-bottom: 5px;
         font-weight: 900;
         color: #32286D;
-        font-family: Nunito;
     }
 
     &__img{
         width: 100%;
         margin-top: 10px;
+        border-radius: 4px;
     }
 
     &__descDiv{

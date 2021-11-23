@@ -14,7 +14,6 @@ export const RetoDesc: React.FC<RetoDescProp> = () => {
     return (
         <section className='retoDesc'>
             <div className='retoDesc__titleDiv'>
-            <h2 className='retoDesc__title'>Reto:</h2>
             <h2 className='retoDesc__title'>Arma tu torre Tosh</h2>
             </div>
 

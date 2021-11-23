@@ -4,7 +4,8 @@
 }
 .retoFoto{
     width: 100%;
-    padding: 165px 16px;
+    margin: 132px 0px 0px 0px;
+    padding: 0px 16px;
     text-align: left;
     color: #32286D;
     font-family: Nunito;
@@ -16,16 +17,16 @@
     
     &__title{
         width: 100%;
-        font-size: 24px;
-        margin-bottom: 5px;
+        margin: 15px 0px 5px 0px;
         font-weight: 900;
         color: #32286D;
-        font-family: Nunito;
     }
 
     &__img{
         width: 100%;
         margin-top: 10px;
+        border-radius: 7px;
+        border: 5px solid #32286D;
     }
 
     &__btnDiv{
