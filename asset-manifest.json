@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/PI2/static/css/main.9a05ff92.chunk.css",
-    "main.js": "/PI2/static/js/main.42de2bc8.chunk.js",
-    "main.js.map": "/PI2/static/js/main.42de2bc8.chunk.js.map",
+    "main.css": "/PI2/static/css/main.54d0f092.chunk.css",
+    "main.js": "/PI2/static/js/main.fa534a65.chunk.js",
+    "main.js.map": "/PI2/static/js/main.fa534a65.chunk.js.map",
     "runtime-main.js": "/PI2/static/js/runtime-main.d6d24ceb.js",
     "runtime-main.js.map": "/PI2/static/js/runtime-main.d6d24ceb.js.map",
     "static/js/2.1f7c7a2a.chunk.js": "/PI2/static/js/2.1f7c7a2a.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ad7c3d36.chunk.js": "/PI2/static/js/3.ad7c3d36.chunk.js",
     "static/js/3.ad7c3d36.chunk.js.map": "/PI2/static/js/3.ad7c3d36.chunk.js.map",
     "index.html": "/PI2/index.html",
-    "static/css/main.9a05ff92.chunk.css.map": "/PI2/static/css/main.9a05ff92.chunk.css.map",
+    "static/css/main.54d0f092.chunk.css.map": "/PI2/static/css/main.54d0f092.chunk.css.map",
     "static/js/2.1f7c7a2a.chunk.js.LICENSE.txt": "/PI2/static/js/2.1f7c7a2a.chunk.js.LICENSE.txt",
     "static/media/BackArrow.ae9acf19.svg": "/PI2/static/media/BackArrow.ae9acf19.svg",
     "static/media/styles.css": "/PI2/static/media/FuturaStdBold.7d0fe182.woff",
@@ -45,13 +45,14 @@
     "static/media/toshGame.eac8f0a8.png": "/PI2/static/media/toshGame.eac8f0a8.png",
     "static/media/toshTorre.0dd8ff26.svg": "/PI2/static/media/toshTorre.0dd8ff26.svg",
     "static/media/twitter.3eb1cc8c.svg": "/PI2/static/media/twitter.3eb1cc8c.svg",
+    "static/media/whatsappLogo.b7a9ea13.svg": "/PI2/static/media/whatsappLogo.b7a9ea13.svg",
     "static/media/zenu.97667c6c.png": "/PI2/static/media/zenu.97667c6c.png",
     "static/media/zigzagPerfil.2660849a.svg": "/PI2/static/media/zigzagPerfil.2660849a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d6d24ceb.js",
     "static/js/2.1f7c7a2a.chunk.js",
-    "static/css/main.9a05ff92.chunk.css",
-    "static/js/main.42de2bc8.chunk.js"
+    "static/css/main.54d0f092.chunk.css",
+    "static/js/main.fa534a65.chunk.js"
   ]
 }
