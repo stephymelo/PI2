@@ -3,13 +3,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 5px;
+    z-index: -1;
 }
 
 .cupon {
     margin-top: 10px;
     box-shadow: 0px 3.24778px 3.24778px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 4.05973px 4.05973px;
-
+    z-index: inherit;
     max-width: 160px;
     margin-left: 30px;
 
