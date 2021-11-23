@@ -9,15 +9,55 @@
         border-radius: 20px;
         &--1 {
             background-color: #629540;
-            height: 60px;
+            height: 85px;
+            border-radius: 20px 20px 0px 0px;
 
             &__logo{
-                width:50%;
+                padding-top:10px;
+                width:40%;
             }
+
         }
 
         &--2 {
             background-color: white;
+            border-radius: 0px 0px 20px 20px;
+
+            &__p{
+                padding-top:10px;
+                padding-bottom:10px;
+            }
+
+            &__h{
+                padding-top:10px;
+            
+                font-size:35px;
+                color:$principal
+            }
+            
+
+            &__buttons{
+                padding-top:20px;
+                padding-bottom:20px;
+                padding-left:10px;
+                padding-right:10px;
+                display: flex;
+
+                .button2{
+                    display: flex;
+                    margin-left:5px;
+                    height:40px;
+
+                }
+
+                #but{
+                    padding-left:20px;
+                    padding-right:20px;
+                }
+
+
+
+            }
         }
       
     }

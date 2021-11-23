@@ -35,8 +35,8 @@ export const RetoFoto: React.FC<RetoFotoProp> = () => {
                 <img className='retoFoto__img' src={torreTosh} />
 
                 <div className='retoFoto__btnDiv'>
-                    <button className='retoFoto__button' onClick={handlePopup}>Tomar de nuevo</button>
-                    <button className='retoFoto__button'>Enviar</button>
+                    <button className='retoFoto__button' >Tomar de nuevo</button>
+                    <button className='retoFoto__button'onClick={handlePopup}>Enviar</button>
                 </div>
             </div>
         </section>
