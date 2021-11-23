@@ -22,7 +22,8 @@
         }
 
         &__line {
-            position: fixed;
+            position: absolute;
+            z-index: -60;
             margin-top: 7px;
             width: 105px;
             height: 4px;
@@ -38,7 +39,8 @@
         }
     }
     &__line {
-   
+        position: relative;
+        z-index: -70;
         margin-top: 8px;
         margin-left:30px;
         margin-bottom:30px;

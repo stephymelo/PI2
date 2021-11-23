@@ -35,15 +35,15 @@ export const CuponPopup: React.FC<CuponPopup> = ({cuponElems,cuponSelected, SetC
     return (
         <section  className='cuponPopup'>
             <article className='cuponPopup__article--1'>
-                <img src={colcafeLogo}></img>
+                <img className='cuponPopup__article--1__logo' src={colcafeLogo}></img>
 
 
             </article>
 
             <article className='cuponPopup__article--2'>
-                <h3>25% de descuento en galletas</h3>
-                <p>Descuento válido en almacenes:</p>
-                <ul>
+                <h3 className='cuponPopup__article--2__title'>25% de descuento en galletas</h3>
+                <p className='cuponPopup__article--2__title--1'>Descuento válido en almacenes:</p>
+                <ul className='cuponPopup__article--2__lista'>
                     <li>Carulla</li>
                     <li>Jumbo</li>
                     <li>Ara</li>
@@ -52,7 +52,7 @@ export const CuponPopup: React.FC<CuponPopup> = ({cuponElems,cuponSelected, SetC
                 <h4>Vence en 5 dias</h4>
 
                 <button className="button" onClick={handleActiveCupon}>Activar</button>
-                <p>Aplica en la compra de “Galletas Tosh Fusión de Cereales” , “Galletas de Chocolate Tosh” , “Galleta de Vainilla Tosh” en sus presentaciones de 382g x 2 tacos </p>
+                <p className="terminos">Aplica en la compra de “Galletas Tosh Fusión de Cereales” , “Galletas de Chocolate Tosh” , “Galleta de Vainilla Tosh” en sus presentaciones de 382g x 2 tacos </p>
 
             </article>
 

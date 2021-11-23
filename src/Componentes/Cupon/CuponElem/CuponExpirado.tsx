@@ -13,7 +13,7 @@ const CuponExpirado: React.FC<CuponExpirado> = ({ }) => {
             <div className='cupon__expirado__section'>
                 <div className='cupon__expirado__section--1'>
                     <img className='cupon__section--1__logo' src={colcafeLogo}></img>
-                    <h3 className="cupon__expirado__section--1__vence">Vencio 20-05</h3>
+                    <h3 className="cupon__expirado__section--1__vence">Venció 20-05</h3>
                 </div>
                 <div className="cupon__expirado__section--2">
                     <h3 className="rotate">B453V</h3>

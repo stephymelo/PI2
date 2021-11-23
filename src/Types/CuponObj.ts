@@ -6,6 +6,7 @@ export type CuponObj = {
     descripcion:string;
     imagenUrl:string;
     codigoActivable:string;
+    color:string;
     status:"noactivos"|"activo"| "expirados";
     
 

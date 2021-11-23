@@ -27,6 +27,7 @@ import PreferencesSelection from '../PreferencesSelection/PreferencesSelection';
 import CuponExpirado from '../Cupon/CuponElem/CuponExpirado';
 import { JuegoElem } from '../Juego/JuegoElem/JuegoElem';
 import { RetoElem } from '../Juego/JuegoElem/RetoElem';
+import colcafeLogo from "../../../Recursos/imagenes/productLogos/pietranResize.png"
 
 
 
@@ -77,38 +78,42 @@ function App() {
   const [cuponElems, setCuponElems] = React.useState<CuponObj[]>([
     {
       id: 3,
-      titulo: 'jhon si que jode',
-      descripcion: 'aa',
-      fechaVencer: '30-20-20',
-      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      titulo: '25% Jamones Pietran',
+      descripcion: 'Vence en 2 días ',
+      fechaVencer: '25-11-21',
+      imagenUrl: 'https://www.pietran.com.co/wp-content/themes/pietran/images/Pietran-con-conservantes-naturales.png',
       codigoActivable: 'A00897',
-      status: 'noactivos'
+      status: 'noactivos',
+      color: '#775BA3',
     },
     {
       id: 1,
-      titulo: 'descuento',
-      descripcion: 'aa',
-      fechaVencer: '30-20-20',
-      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      titulo: '10% en galletas Tosh',
+      descripcion: 'Vence en 7 días',
+      fechaVencer: '30-11-21',
+      imagenUrl: 'https://tosh.com.co/wp-content/uploads/2021/03/logo-tosh.png',
       codigoActivable: 'A00897',
-      status: 'noactivos'
+      status: 'noactivos',
+      color: '#629540'
     },
     {
       id: 2,
-      titulo: 'descuento',
-      descripcion: 'aa',
-      fechaVencer: '30-20-20',
-      imagenUrl: 'https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-6-57-53-pm.png',
+      titulo: '2x1 pastas Dorias',
+      descripcion: 'Vence en 12 días',
+      fechaVencer: '03-12-21',
+      imagenUrl: 'https://www.pastasdoria.com/sites/default/files/inline-images/logo-doria_0_0.png',
       codigoActivable: 'A00897',
-      status: 'noactivos'
+      status: 'noactivos',
+      color: '#052B52'
     }
 
 
   ]);
 
   const [cuponSelected, SetCuponSelected] = React.useState<number>();
+  const [openCuponQR, SetOpenCuponQR] = React.useState<boolean>(false);
 
-  const handleCreate = (newCuponElem: { title: string, descripcion: string, fechaVencer: string, imagenUrl: string, codigoActivable: string, status: 'activo' }) => {
+  const handleCreate = (newCuponElem: { title: string, descripcion: string, fechaVencer: string, imagenUrl: string, codigoActivable: string, status: 'activo', color: string }) => {
     const newArray = [
       ...cuponElems,
       {
@@ -118,7 +123,8 @@ function App() {
         fechaVencer: newCuponElem.fechaVencer,
         imagenUrl: newCuponElem.imagenUrl,
         codigoActivable: newCuponElem.codigoActivable,
-        status: newCuponElem.status
+        status: newCuponElem.status,
+        color: newCuponElem.color
 
       }
     ];
@@ -176,9 +182,18 @@ function App() {
             {cuponSelected ? <CuponPopup cuponElems={cuponElems} cuponSelected={cuponSelected} SetCuponSelected={SetCuponSelected} setCuponElems={setCuponElems} /> : <h1></h1>}
           </div>} />
           <Route path='activos' element={<div className="contenedorCuponActivo">
-            <CuponActivo />
-            <CuponQR/>
-            </div>} />
+
+            <CuponActivo handleOpenQR={() => {
+              SetOpenCuponQR(true);
+            }} />
+
+            {openCuponQR && <div className="blurQR"></div>};
+
+
+            {openCuponQR && <CuponQR handleCloseQR={() => {
+              SetOpenCuponQR(false);
+            }} />}
+          </div>} />
           <Route path='expirados' element={<CuponExpirado />} />
 
         </Route>
@@ -199,78 +214,72 @@ function App() {
         </Route>
 
 
+          {/* RETOS */}
+        <Route path='retoDesc' element={
+        <><Header
+          titulo={'Reto'}
+          descripcion={'Gana premios por realizar los retos con los productos seleccionados'}/> <RetoDesc/>
+          </>}> 
+          </Route>
+
+        <Route path='retoFoto' element={
+        <><Header
+          titulo={'Reto'}
+          descripcion={'Toma una fotografia del reto finalizado'} />
+          <RetoFoto /></>}>
+          </Route>
+
+
+
+
 
         {/* DESCUENTO */}
-        <Route path="/descuentos" element={
-          <div>
-            <Header
-              titulo={'Descuentos'}
-              descripcion={'Conozca los descuentos disponibles en las diferentes tiendas'} />
-            <Descuento id={0} titulo={''} fechaVencer={0} descripcion={''} imagenUrl={''} codigoActivable={''} />
+        <Route path="/descuentos" element={<div>
+          <Header
+            titulo={'Descuentos'}
+            descripcion={'Conozca los descuentos disponibles en las diferentes tiendas'} />
+          <Descuento id={0} titulo={''} fechaVencer={0} descripcion={''} imagenUrl={''} codigoActivable={''} />
 
-          </div>
-        }>
+        </div>}>
 
         </Route>
-        <Route path="/perfil" element={
-          <div>
-            <Perfil currentUser={currentUser} />
-          </div>
-        }>
+        <Route path="/perfil" element={<div>
+          <Perfil currentUser={currentUser} />
+        </div>}>
 
         </Route>
 
-        <Route path="/retoDesc" element={
-          <div>
-            <Header
-              titulo={'Actividades'}
-              descripcion={'Gana premios por realizar los retos con los productos seleccionados'} />
-            <RetoDesc />
-          </div>
-        }>
-        </Route>
+        </Routes>
+        
 
-        <Route path="/retoFoto" element={
-          <div>
-            <Header
-              titulo={'Actividades'}
-              descripcion={'Toma una fotografia del reto finalizado'} />
-            <RetoFoto />
-          </div>
-        }>
-        </Route>
+   
+        
+        </>
 
-      </Routes>
-
-
-      <Outlet></Outlet>
-
-
-
-
-
-
-
-    </>
+      
   }
 
-
-  return (
-
-    <div className="App">
+  
 
 
-      <HashRouter>
-        <Routes>
-          <Route path="/*" element={<LoginContainer />} />
-          <Route path="/menu/*" element={<DefaultContainer />} />
-        </Routes>
-      </HashRouter>
+        return (
 
-    </div>
-  );
+        <div className="App">
+
+
+          <HashRouter>
+            <Routes>
+              <Route path="/*" element={<LoginContainer />} />
+              <Route path="/menu/*" element={<DefaultContainer />} />
+            </Routes>
+          </HashRouter>
+
+        </div>
+        );
 }
 
 
 
-export default App;
+        export default App;
+
+

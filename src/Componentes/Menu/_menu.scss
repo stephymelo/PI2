@@ -49,6 +49,12 @@
                 fill: $blue;
             }
         }
+        &--selectedPerfil {
+            color: $blue;
+            svg > *{
+                stroke: $blue;
+            }
+        }
 
         
     }

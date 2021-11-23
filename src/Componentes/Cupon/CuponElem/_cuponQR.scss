@@ -1,19 +1,36 @@
-.cuponQr{
-    width: 200px;
-    position: absolute;
-    margin-left:100px;
+.cuponQr {
+    width: 300px;
+    position: relative;
+    margin-left: 50px;
+    margin-top: -200px;
+  
 
-    &__article{
-        &--1{
+    &__article {
+        border-radius: 20px;
+        &--1 {
             background-color: #629540;
-            height:100px;
+            height: 60px;
 
+            &__logo{
+                width:50%;
+            }
         }
 
-        &--2{
+        &--2 {
             background-color: white;
-            
-
         }
+      
     }
+    
+}
+
+.blurQR {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    background: rgba(50, 40, 109, 0.51);
+    backdrop-filter: blur(8px);
 }

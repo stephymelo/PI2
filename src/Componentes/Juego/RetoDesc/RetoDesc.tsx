@@ -1,4 +1,8 @@
 import * as React from 'react';
+import {
+    Link,
+} from "react-router-dom";
+
 
 import torreTosh from "../../../Recursos/imagenes/retos/toshTorre.svg";
 
@@ -21,7 +25,10 @@ export const RetoDesc: React.FC<RetoDescProp> = () => {
                 <p>La idea es construir la torre más creativa y alta que puedas, utilizando únicamente galletas Tosh. Puedes construir cualquier estructura que te imagines, deja fluir tu imaginación. No es valido usar ningún otro tipo de materiales como pegamento o cinta. </p>
             </div>
 
-            <button className='retoDesc__button'>Participar</button>
+
+            
+            <button className='retoDesc__button'><Link to="/menu/retoFoto" className="link"><p>Participar</p></Link></button>
+            
         </section>
     );
 }
