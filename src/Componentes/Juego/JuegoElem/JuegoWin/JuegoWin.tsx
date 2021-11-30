@@ -14,7 +14,7 @@ export const JuegoWin: React.FC<JuegoWin> = () => {
       };
     return (
         <section className="gamePubli" style={{ backgroundImage:`url(${win})` }}>
-            <button className='irACupon'><Link to="/menu/miscupones" className="link"><p>Ver Cupon</p></Link></button>
+            <button className='irACupon'><Link to="/menu/miscupones/todos" className="link"><p>Ver Cupon</p></Link></button>
         </section>
 );
 }
