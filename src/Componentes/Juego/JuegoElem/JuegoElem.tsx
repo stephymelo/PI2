@@ -3,6 +3,9 @@ import toshGame from "../../../Recursos/imagenes/productLogos/toshGame.png"
 import toshLogo from "../../../Recursos/imagenes/productLogos/toshLogo.png"
 import zenuLogo from "../../../Recursos/imagenes/productLogos/ricaLogo.png"
 import jetLogo from "../../../Recursos/imagenes/productLogos/jetLogo.png"
+import {
+    Link,
+} from "react-router-dom";
 
 interface JuegoElem {
 }
@@ -13,7 +16,9 @@ export const JuegoElem: React.FC<JuegoElem> = () => {
       };
     return (
         <section className="gameList">
+        
         <h2 className="gameList__title">Último lanzamiento</h2>
+        <Link to="/menu/juegopubli">
         <article className="lastGame" style={{ backgroundImage:`url(${toshGame})` }}>
             <img className="lastGame__logo" src={toshLogo}/>
             <div className="lastGame__rect">
@@ -24,6 +29,8 @@ export const JuegoElem: React.FC<JuegoElem> = () => {
                 </div>
             </div>
         </article>
+         
+        </Link>
   
         <h2 className="gameList__title">Más juegos y cupones</h2>
         <div className="moreGamesList">

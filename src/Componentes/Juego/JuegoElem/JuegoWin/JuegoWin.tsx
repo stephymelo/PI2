@@ -1,5 +1,9 @@
 import * as React from 'react';
 import win from "../../../../Recursos/imagenes/juego/juegowin.png";
+import {
+    Link,
+} from "react-router-dom";
+
 
 interface JuegoWin {
 }
@@ -10,7 +14,7 @@ export const JuegoWin: React.FC<JuegoWin> = () => {
       };
     return (
         <section className="gamePubli" style={{ backgroundImage:`url(${win})` }}>
-            <button className="irACupon">Ver Cupon</button>
+            <button className='irACupon'><Link to="/menu/miscupones" className="link"><p>Ver Cupon</p></Link></button>
         </section>
 );
 }
