@@ -46,8 +46,8 @@ function App() {
   const [currentUser, setCurrentUser] = useState<PerfilObj>({
     id: 0,
     nombre: 'userBase',
-    username: 'userBase',
-    contra: '0000',
+    username: 'Eficacia',
+    contra: 'Efipuntos',
     correo: 'userBase@gmail.com',
     fechaNacimiento: 8122012,
     preferencias: [],

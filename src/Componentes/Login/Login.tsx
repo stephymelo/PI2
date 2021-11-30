@@ -22,7 +22,7 @@ const Login: React.FC<LoginProp> = ({ users, getLoginUser}) => {
   const alert = React.useRef<HTMLDivElement>(null);
   const handleLogin = () =>{
     
-    users.forEach(user =>{
+    /* users.forEach(user =>{
       
       if(username === user.username && password === user.contra){
         console.log("Dsnole")
@@ -39,7 +39,11 @@ const Login: React.FC<LoginProp> = ({ users, getLoginUser}) => {
         
       }
       
-    })
+    }) */
+    if(username === "Eficacia" && password === "Efipuntos"){
+        console.log("Dsnole")
+        navigate("menu/miscupones");
+    }
   }
 
   
