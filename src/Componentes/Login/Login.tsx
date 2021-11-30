@@ -42,7 +42,7 @@ const Login: React.FC<LoginProp> = ({ users, getLoginUser}) => {
     }) */
     if(username === "Eficacia" && password === "Efipuntos"){
         console.log("Dsnole")
-        navigate("menu/miscupones");
+        navigate("menu/miscupones/todos");
     }
   }
 
