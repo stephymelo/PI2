@@ -28,6 +28,10 @@ import CuponExpirado from '../Cupon/CuponElem/CuponExpirado';
 import { JuegoElem } from '../Juego/JuegoElem/JuegoElem';
 import { RetoElem } from '../Juego/JuegoElem/RetoElem';
 import colcafeLogo from "../../../Recursos/imagenes/productLogos/pietranResize.png"
+import { JuegoPubli } from '../Juego/JuegoElem/JuegoTorre/JuegoPubli';
+import { JuegoDos } from '../Juego/JuegoElem/JuegoDos/JuegoDos';
+import { JuegoPantalla } from '../Juego/JuegoElem/JuegoPantalla/JuegoPantalla';
+import { JuegoWin } from '../Juego/JuegoElem/JuegoWin/JuegoWin';
 
 
 
@@ -213,6 +217,25 @@ function App() {
           <Route path='retos' element={<RetoElem />} />
         </Route>
 
+        <Route path="juegopubli/" element={
+          <JuegoPubli/>
+            
+        }/>
+
+        <Route path="juegodos/" element={
+          <JuegoDos/>
+            
+        }/>
+
+        <Route path="juegotetrix/" element={
+          <JuegoPantalla/>
+            
+        }/>
+
+        <Route path="juegowin/" element={
+          <JuegoWin/>
+            
+        }/>
 
           {/* RETOS */}
         <Route path='retoDesc' element={
@@ -230,8 +253,7 @@ function App() {
           </Route>
 
 
-
-
+        
 
         {/* DESCUENTO */}
         <Route path="/descuentos" element={<div>
